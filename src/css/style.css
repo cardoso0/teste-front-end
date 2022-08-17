@@ -4,6 +4,8 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+  font-family: "Poppins", sans-serif;
 }
 
 header .header-container {
@@ -84,8 +86,9 @@ header nav ul li a img {
   left: 144px;
 }
 #banner figure figcaption p {
+  font-weight: 800;
   font-size: 40px;
-  font-weight: bold;
+  line-height: 60px;
   color: #fff;
 }
 #banner figure figcaption button {
@@ -348,4 +351,76 @@ header nav ul li a img {
   border: none;
   border-radius: 10px;
   color: #fff;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  grid-template-areas: "area1 area2 area2" "area1 area2 area2" "area1 area3 area3";
+  color: #fff;
+  background-color: #FBB900;
+}
+footer a {
+  color: #fff;
+}
+footer h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+footer .area1 {
+  grid-area: area1;
+  border-right: 1px solid #fff;
+  height: 604px;
+}
+footer .area1 .social-media {
+  margin: 0 auto;
+}
+footer .area1 .social-media h1 {
+  margin: 48px auto 32px;
+  width: 256px;
+}
+footer .area1 .social-media ul {
+  display: flex;
+  margin: 0 auto;
+  width: 140px;
+}
+footer .area1 .social-media ul li {
+  padding-right: 32px;
+}
+footer .area1 .about h1 {
+  margin: 56px 0 24px;
+}
+footer .area1 .about p {
+  margin: 0 auto;
+  width: 270px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+footer .area2 {
+  grid-area: area2;
+  border-bottom: 1px solid #fff;
+  height: 470px;
+}
+footer .area2 .links {
+  display: flex;
+  justify-content: space-between;
+}
+footer .area2 .payments {
+  display: flex;
+}
+footer .area2 .payments ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+footer .area2 .payments ul li {
+  padding: 0 15px 5px 0;
+}
+footer .area3 {
+  grid-area: area3;
+  height: 134px;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
