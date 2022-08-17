@@ -281,4 +281,71 @@ header nav ul li a img {
 }
 #instagram ul {
   display: flex;
+}
+
+#newsletter {
+  max-width: 90%;
+  margin: 80px auto;
+}
+#newsletter div {
+  text-align: center;
+}
+#newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 772px;
+  margin: 0 auto;
+  background-color: #FEF6E7;
+}
+#newsletter form h1 {
+  width: 320px;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+#newsletter form #name {
+  width: 343px;
+  height: 48px;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  background-image: url(../assets/form/User.png);
+  background-repeat: no-repeat;
+  background-position: 15px;
+}
+#newsletter form #name::-moz-placeholder {
+  padding-left: 60px;
+}
+#newsletter form #name:-ms-input-placeholder {
+  padding-left: 60px;
+}
+#newsletter form #name::placeholder {
+  padding-left: 60px;
+}
+#newsletter form #email {
+  width: 343px;
+  height: 48px;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-image: url(../assets/form/EnvelopeSimple.png);
+  background-repeat: no-repeat;
+  background-position: 15px;
+}
+#newsletter form #email::-moz-placeholder {
+  padding-left: 60px;
+}
+#newsletter form #email:-ms-input-placeholder {
+  padding-left: 60px;
+}
+#newsletter form #email::placeholder {
+  padding-left: 60px;
+}
+#newsletter form button {
+  width: 145px;
+  margin: 32px 0;
+  height: 40px;
+  background-color: #FBB900;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

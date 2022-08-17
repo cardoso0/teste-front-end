@@ -357,3 +357,63 @@ header {
     display: flex;
   }
 }
+
+#newsletter {
+  max-width: 90%;
+  margin: 80px auto;
+
+  div {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 772px;
+    margin: 0 auto;
+    background-color: #FEF6E7;
+
+    h1 {
+      width: 320px;
+      margin: 40px 0 20px 0;
+      text-align: center;
+    }
+
+    #name {
+      width: 343px;
+      height: 48px;
+      border: 1px solid #E5E5E5;
+      border-radius: 10px;
+      background-image: url(../assets/form/User.png);
+      background-repeat: no-repeat;
+      background-position: 15px;
+    }
+    #name::placeholder {
+      padding-left: 60px;
+    }
+
+    #email {
+      width: 343px;
+      height: 48px;
+      border: 1px solid #E5E5E5;
+      border-radius: 10px;
+      margin-top: 10px;
+      background-image: url(../assets/form/EnvelopeSimple.png);
+      background-repeat: no-repeat;
+      background-position: 15px;
+    }
+    #email::placeholder {
+      padding-left: 60px;
+    }
+    button {
+      width: 145px;
+      margin: 32px 0;
+      height: 40px;
+      background-color: $primaryColor;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+    }
+  }
+}
