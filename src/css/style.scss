@@ -8,6 +8,8 @@ $secondColor: #9F9F9F;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -115,8 +117,9 @@ header {
       left: 144px;
 
       p {
+        font-weight: 800;
         font-size: 40px;
-        font-weight: bold;
+        line-height: 60px;
         color: #fff;
       }
 
@@ -389,6 +392,7 @@ header {
       background-repeat: no-repeat;
       background-position: 15px;
     }
+
     #name::placeholder {
       padding-left: 60px;
     }
@@ -403,9 +407,11 @@ header {
       background-repeat: no-repeat;
       background-position: 15px;
     }
+
     #email::placeholder {
       padding-left: 60px;
     }
+
     button {
       width: 145px;
       margin: 32px 0;
@@ -415,5 +421,101 @@ header {
       border-radius: 10px;
       color: #fff;
     }
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  grid-template-areas:
+    "area1 area2 area2"
+    "area1 area2 area2"
+    "area1 area3 area3"
+  ;
+  color: #fff;
+  background-color: $primaryColor;
+
+  a {
+    color: #fff;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .area1 {
+    grid-area: area1;
+    border-right: 1px solid #fff;
+    height: 604px;
+
+    .social-media {
+      margin: 0 auto;
+
+      h1 {
+        margin: 48px auto 32px;
+        width: 256px;
+        // border: $bd;
+      }
+
+      ul {
+        display: flex;
+        margin: 0 auto;
+        width: 140px;
+
+        // border: $bd;
+        li {
+          padding-right: 32px;
+        }
+      }
+    }
+
+    .about {
+      h1 {
+        margin: 56px 0 24px;
+      }
+
+      p {
+        margin: 0 auto;
+        width: 270px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+  }
+
+  .area2 {
+    grid-area: area2;
+    border-bottom: 1px solid #fff;
+    height: 470px;
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .payments {
+      display: flex;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+          padding: 0 15px 5px 0;
+        }
+      }
+    }
+  }
+
+  .area3 {
+    grid-area: area3;
+    height: 134px;
+    display: flex;
   }
 }
