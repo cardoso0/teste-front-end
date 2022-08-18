@@ -17,6 +17,11 @@ $bd: 1px solid #000;
 header {
   // border-bottom: 1px solid black;
   // border-radius: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
+  border-radius: 0px 0px 10px 10px;
 
   .header-container {
     max-width: 90%;
@@ -52,7 +57,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
-    border-top: 2px solid #F0F0F0;
+    border-top: 1px solid #F0F0F0;
     border-bottom: 2px solid #F0F0F0;
 
     form {
@@ -251,7 +256,7 @@ header {
 
       p {
         @include mixins.text-g;
-        color: #f0f0f0;
+        color: #fff;
         margin-top: 8px;
       }
 
@@ -485,7 +490,7 @@ footer {
         width: 290px;
         text-align: center;
         font-weight: 400;
-        color: #f0f0f0;
+        color: #fff;
       }
     }
 
@@ -497,7 +502,7 @@ footer {
 
     span {
       @include mixins.title-p;
-      color: #f0f0f0;
+      color: #fff;
     }
 
     .links {
@@ -514,7 +519,7 @@ footer {
 
       a {
         @include mixins.text-m;
-        color: #f0f0f0;
+        color: #fff;
       }
     }
 
@@ -567,7 +572,7 @@ footer {
 
     p {
       @include mixins.text-p;
-      color: #f0f0f0;
+      color: #fff;
     }
   }
 }

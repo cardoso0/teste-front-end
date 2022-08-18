@@ -8,6 +8,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
+  border-radius: 0px 0px 10px 10px;
+}
 header .header-container {
   max-width: 90%;
   margin: 0 auto;
@@ -42,7 +49,7 @@ header .header-mid {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
-  border-top: 2px solid #F0F0F0;
+  border-top: 1px solid #F0F0F0;
   border-bottom: 2px solid #F0F0F0;
 }
 header .header-mid form {
@@ -113,7 +120,7 @@ header nav ul li a img {
   font-weight: 800;
   font-size: 40px;
   line-height: 60px;
-  color: #f0f0f0;
+  color: #fff;
 }
 #banner figure figcaption button {
   font-weight: 900;
@@ -121,7 +128,7 @@ header nav ul li a img {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.08em;
-  color: #f0f0f0;
+  color: #fff;
   height: 48px;
   background: #FBB900;
   border: 1px solid #F0D075;
@@ -232,7 +239,7 @@ header nav ul li a img {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.08em;
-  color: #f0f0f0;
+  color: #fff;
   margin-top: 32px;
 }
 #brand .brand-cards .card-1 {
@@ -242,7 +249,7 @@ header nav ul li a img {
   font-weight: 800;
   font-size: 40px;
   line-height: 60px;
-  color: #f0f0f0;
+  color: #fff;
   font-weight: 700;
 }
 #brand .brand-cards .card-1 p {
@@ -250,7 +257,7 @@ header nav ul li a img {
   font-size: 16px;
   line-height: 24px;
   color: #9F9F9F;
-  color: #f0f0f0;
+  color: #fff;
   margin-top: 8px;
 }
 #brand .brand-cards .card-1 button {
@@ -339,7 +346,7 @@ header nav ul li a img {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.08em;
-  color: #f0f0f0;
+  color: #fff;
 }
 
 #instagram {
@@ -442,7 +449,7 @@ header nav ul li a img {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.08em;
-  color: #f0f0f0;
+  color: #fff;
   height: 40px;
   font-size: 14px;
   line-height: 21px;
@@ -459,7 +466,7 @@ footer h1 {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
-  color: #f0f0f0;
+  color: #fff;
   text-align: center;
 }
 footer a {
@@ -496,7 +503,7 @@ footer .area1 .about p {
   width: 290px;
   text-align: center;
   font-weight: 400;
-  color: #f0f0f0;
+  color: #fff;
 }
 footer .area2 {
   grid-area: area2;
@@ -507,7 +514,7 @@ footer .area2 span {
   font-size: 20px;
   line-height: 30px;
   color: #4D4D4D;
-  color: #f0f0f0;
+  color: #fff;
 }
 footer .area2 .links {
   display: flex;
@@ -524,7 +531,7 @@ footer .area2 .links a {
   font-size: 14px;
   line-height: 21px;
   color: #9F9F9F;
-  color: #f0f0f0;
+  color: #fff;
 }
 footer .area2 .payments {
   display: flex;
@@ -568,7 +575,7 @@ footer .area3 p {
   font-size: 12px;
   line-height: 18px;
   color: #9F9F9F;
-  color: #f0f0f0;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
