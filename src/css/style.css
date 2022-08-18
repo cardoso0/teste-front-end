@@ -171,20 +171,21 @@ header nav ul li a img {
   margin: 80px auto;
   height: 400px;
 }
-#vitrine div {
+#vitrine .vitrine-title {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
-#vitrine div h1 {
+#vitrine .vitrine-title h1 {
   font-weight: 700;
   font-size: 32px;
   line-height: 48px;
   color: #4D4D4D;
 }
-#vitrine div ul {
+#vitrine .vitrine-title ul {
   display: flex;
 }
-#vitrine div ul li {
+#vitrine .vitrine-title ul li {
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -193,40 +194,128 @@ header nav ul li a img {
   border: 1px solid #E5E5E5;
   margin-right: 16px;
 }
-#vitrine div ul li a {
+#vitrine .vitrine-title ul li a {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #9F9F9F;
   font-weight: 700;
 }
-#vitrine div .selected {
+#vitrine .vitrine-title .selected {
   background-color: #FBB900;
 }
-#vitrine div .selected a {
+#vitrine .vitrine-title .selected a {
   color: #fff;
 }
-#vitrine .vitrine-content {
-  width: 100%;
-  height: 300px;
-  background-color: gray;
+#vitrine #vitrine-content .vitrine-content-list {
+  display: flex;
 }
-#vitrine a {
+#vitrine #vitrine-content li {
+  margin-right: 70px;
+}
+#vitrine #vitrine-content li .vitrine-content-top {
+  display: flex;
+  justify-content: space-between;
+}
+#vitrine #vitrine-content li .vitrine-content-top button {
+  width: 100px;
+  height: 40px;
+  background: #FEF6E7;
+  border-radius: 6px;
+  margin-right: 100px;
+  color: #FBB900;
+  border: none;
+  font-weight: 700;
+}
+#vitrine #vitrine-content li figure div {
+  text-align: center;
+}
+#vitrine #vitrine-content li figure figcaption {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9F;
+  color: #4D4D4D;
+  font-weight: 300;
+  width: 145px;
+  height: 42px;
+  text-align: center;
+  margin: 0 auto;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-price {
+  margin-top: 15px;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-price .price-old {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9F9F9F;
+  text-align: center;
+  text-decoration-line: line-through;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-price .price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #4D4D4D;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-price .price span {
+  font-size: 22px;
+  line-height: 33px;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-assinatura {
+  margin-top: 5px;
+  text-align: center;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-assinatura .assinatura-1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9F9F9F;
+  color: #FBB900;
+  font-weight: 700;
+}
+#vitrine #vitrine-content li .vitrine-content-priece .container-assinatura .assinatura-2 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9F9F9F;
+  font-weight: 600;
+  color: #4D4D4D;
+}
+#vitrine #vitrine-content li .price-btn {
+  height: 48px;
+  background: #FBB900;
+  border: 1px solid #F0D075;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #fff;
+  width: 220px;
+}
+#vitrine .vitrine-ver {
   display: flex;
   justify-content: center;
 }
-#vitrine a span {
+#vitrine .vitrine-ver span {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   color: #4D4D4D;
   text-decoration-line: underline;
   color: #FBB900;
+  margin: 40px 0;
 }
 
 #brand {
   max-width: 90%;
   margin: 80px auto;
+  margin-top: 250px;
 }
 #brand .brand-title {
   display: flex;

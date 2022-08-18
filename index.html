@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <title>O Cãoselheiro - Loja</title>
 </head>
 
@@ -83,7 +85,7 @@
       </div>
     </section>
     <section id="vitrine">
-      <div>
+      <div class="vitrine-title">
         <h1>Meu cachorro...</h1>
         <ul>
           <li class="selected"><a href="#">É AGITADO</a></li>
@@ -93,10 +95,12 @@
           <li><a href="#">É ESTRESSADO</a></li>
         </ul>
       </div>
-      <div class="vitrine-content">
-        Conteudo da vitrine
+      <div id="vitrine-content">
+        <ul class="vitrine-content-list">
+
+        </ul>
       </div>
-      <a href="#"><span>Ver todos</span></a>
+      <a href="#" class="vitrine-ver"><span>Ver todos</span></a>
     </section>
     <section id="brand">
       <div class="brand-title">
@@ -290,6 +294,11 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script type="module" src="./src/js/main.js"></script>
+  <script src="./src/js/getProducts.js"></script>
   <script src="./src/js/teste.js"></script>
 </body>
 

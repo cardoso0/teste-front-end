@@ -178,9 +178,10 @@ header {
   @include mixins.container;
   height: 400px;
 
-  div {
+  .vitrine-title {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 
     h1 {
       @include mixins.title-m;
@@ -196,7 +197,6 @@ header {
         height: 40px;
         border-radius: 6px;
         border: 1px solid #E5E5E5;
-        // background-color: variables.$primary-color;
         margin-right: 16px;
 
         a {
@@ -215,13 +215,109 @@ header {
     }
   }
 
-  .vitrine-content {
-    width: 100%;
-    height: 300px;
-    background-color: gray;
+  #vitrine-content {
+    // width: 100%;
+    // height: 300px;
+    // background-color: gray;
+
+    .vitrine-content-list {
+      display: flex;
+
+    }
+
+    li {
+      margin-right: 70px;
+
+      .vitrine-content-top {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          width: 100px;
+          height: 40px;
+          background: #FEF6E7;
+          border-radius: 6px;
+          margin-right: 100px;
+          color: variables.$primary-color;
+          border: none;
+          font-weight: 700;
+        }
+      }
+
+      figure {
+        div {
+          text-align: center;
+        }
+
+        figcaption {
+          @include mixins.text-m;
+          color: variables.$second-text-color;
+          font-weight: 300;
+          width: 145px;
+          height: 42px;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+      }
+
+      .vitrine-content-priece {
+        .container-price {
+          margin-top: 15px;
+
+          .price-old {
+            @include mixins.text-g;
+            text-align: center;
+            text-decoration-line: line-through;
+
+          }
+
+          .price {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: variables.$second-text-color;
+
+            span {
+              font-size: 22px;
+              line-height: 33px;
+            }
+          }
+        }
+
+        .container-assinatura {
+          margin-top: 5px;
+          text-align: center;
+
+          .assinatura-1 {
+            @include mixins.text-g;
+            color: variables.$primary-color;
+            font-weight: 700;
+          }
+
+          .assinatura-2 {
+            @include mixins.text-p;
+            font-weight: 600;
+            color: variables.$second-text-color;
+          }
+        }
+      }
+
+      .price-btn {
+        @include mixins.btn;
+        @include mixins.text-btn;
+        width: 220px;
+      }
+    }
   }
 
-  a {
+
+
+
+
+
+  .vitrine-ver {
     display: flex;
     justify-content: center;
 
@@ -229,12 +325,14 @@ header {
       @include mixins.title-p;
       text-decoration-line: underline;
       color: variables.$primary-color;
+      margin: 40px 0;
     }
   }
 }
 
 #brand {
   @include mixins.container;
+  margin-top: 250px;
 
   .brand-title {
     display: flex;
