@@ -22,9 +22,17 @@ header .header-top div {
   align-items: center;
 }
 header .header-top div p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
   color: #9F9F9F;
 }
 header .header-top div span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9F9F9F;
+  font-weight: 600;
   color: #FBB900;
 }
 header .header-top div img {
@@ -48,6 +56,12 @@ header .header-mid form input {
   background-repeat: no-repeat;
   background-position: 96%;
 }
+header .header-mid form input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9F;
+}
 header .header-mid ul {
   display: flex;
   align-items: center;
@@ -66,7 +80,14 @@ header nav ul li {
 header nav ul li a {
   display: flex;
   align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
   color: #9F9F9F;
+  font-weight: 600;
+}
+header nav ul li a span {
+  color: #FBB900;
 }
 header nav ul li a img {
   padding-right: 10px;

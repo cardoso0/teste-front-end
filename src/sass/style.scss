@@ -36,11 +36,13 @@ header {
       align-items: center;
 
       p {
-        color: $secondColor;
+        @include mixins.text-p;
       }
 
       span {
-        color: $primaryColor;
+        @include mixins.text-p;
+        font-weight: 600;
+        color: variables.$primary-color;
       }
 
       img {
@@ -68,6 +70,9 @@ header {
         background-image: url(../assets/header/mid/MagnifyingGlass.png);
         background-repeat: no-repeat;
         background-position: 96%;
+        &::placeholder {
+          @include mixins.text-m;
+        }
       }
     }
 
@@ -93,8 +98,12 @@ header {
         a {
           display: flex;
           align-items: center;
-          color: $secondColor;
+          @include mixins.text-p;
+          font-weight: 600;
 
+          span {
+            color: variables.$primary-color;
+          }
           img {
             padding-right: 10px;
           }
