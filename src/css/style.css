@@ -450,19 +450,19 @@ footer {
   color: #fff;
   background-color: #FBB900;
 }
-footer a {
-  color: #fff;
-}
 footer h1 {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+  color: #f0f0f0;
   text-align: center;
+}
+footer a {
+  color: #fff;
 }
 footer .area1 {
   grid-area: area1;
   border-right: 1px solid #fff;
-  height: 604px;
 }
 footer .area1 .social-media {
   margin: 0 auto;
@@ -483,36 +483,88 @@ footer .area1 .about h1 {
   margin: 56px 0 24px;
 }
 footer .area1 .about p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9F9F9F;
   margin: 0 auto;
-  width: 270px;
+  width: 290px;
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+  color: #f0f0f0;
 }
 footer .area2 {
   grid-area: area2;
   border-bottom: 1px solid #fff;
-  height: 470px;
+}
+footer .area2 span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4D4D4D;
+  color: #f0f0f0;
 }
 footer .area2 .links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+footer .area2 .links ul {
+  margin-top: 56px;
+}
+footer .area2 .links-primary {
+  margin-bottom: 20px;
+}
+footer .area2 .links a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9F;
+  color: #f0f0f0;
 }
 footer .area2 .payments {
   display: flex;
+  justify-content: space-between;
+  margin: 31px 0 40px;
+}
+footer .area2 .payments .payments-card-1 {
+  margin-left: 50px;
+}
+footer .area2 .payments .payments-card-2 {
+  margin-right: 173px;
 }
 footer .area2 .payments ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 24px;
 }
 footer .area2 .payments ul li {
   padding: 0 15px 5px 0;
 }
+footer .area2 .payments figure {
+  margin-top: 24px;
+}
 footer .area3 {
   grid-area: area3;
-  height: 134px;
   display: flex;
+  padding: 40px 0;
+  align-items: center;
+  border: 1px solid #000;
+}
+footer .area3 .area3-card-1 {
+  margin-left: 50px;
+}
+footer .area3 .area3-card-2 {
+  margin-left: 270px;
+}
+footer .area3 .area3-card-2 img {
+  margin-right: 32px;
+}
+footer .area3 p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9F9F9F;
+  color: #f0f0f0;
 }
 
 /*# sourceMappingURL=style.css.map */

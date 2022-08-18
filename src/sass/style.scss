@@ -441,23 +441,20 @@ footer {
     "area1 area3 area3"
   ;
   color: #fff;
-  background-color: $primaryColor;
+  background-color: variables.$primary-color;
+
+  h1 {
+    @include mixins.title-footer;
+    text-align: center;
+  }
 
   a {
     color: #fff;
   }
 
-  h1 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-  }
-
   .area1 {
     grid-area: area1;
     border-right: 1px solid #fff;
-    height: 604px;
 
     .social-media {
       margin: 0 auto;
@@ -465,7 +462,6 @@ footer {
       h1 {
         margin: 48px auto 32px;
         width: 256px;
-        // border: $bd;
       }
 
       ul {
@@ -473,7 +469,6 @@ footer {
         margin: 0 auto;
         width: 140px;
 
-        // border: $bd;
         li {
           padding-right: 32px;
         }
@@ -486,12 +481,12 @@ footer {
       }
 
       p {
+        @include mixins.text-p;
         margin: 0 auto;
-        width: 270px;
+        width: 290px;
         text-align: center;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 21px;
+        color: #f0f0f0;
       }
     }
 
@@ -500,30 +495,80 @@ footer {
   .area2 {
     grid-area: area2;
     border-bottom: 1px solid #fff;
-    height: 470px;
+
+    span {
+      @include mixins.title-p;
+      color: #f0f0f0;
+    }
 
     .links {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+
+      ul {
+        margin-top: 56px;
+      }
+
+      &-primary {
+        margin-bottom: 20px;
+      }
+
+      a {
+        @include mixins.text-m;
+        color: #f0f0f0;
+      }
     }
 
     .payments {
       display: flex;
+      justify-content: space-between;
+      margin: 31px 0 40px;
+
+      .payments-card-1 {
+        margin-left: 50px;
+      }
+
+      .payments-card-2 {
+        margin-right: 173px;
+      }
 
       ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        margin-top: 24px;
 
         li {
           padding: 0 15px 5px 0;
         }
+      }
+
+      figure {
+        margin-top: 24px;
       }
     }
   }
 
   .area3 {
     grid-area: area3;
-    height: 134px;
     display: flex;
+    padding: 40px 0;
+    align-items: center;
+    border: $bd;
+
+    .area3-card-1 {
+      margin-left: 50px;
+    }
+    .area3-card-2 {
+      margin-left: 270px;
+
+      img {
+        margin-right: 32px;
+      }
+    }
+
+    p {
+      @include mixins.text-p;
+      color: #f0f0f0;
+    }
   }
 }
