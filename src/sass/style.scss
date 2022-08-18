@@ -2,15 +2,21 @@ $bd: 1px solid #000;
 $primaryColor: #FBB900;
 $secondColor: #9F9F9F;
 
+@use 'variables';
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
   font-family: 'Poppins', sans-serif;
+
 }
+
 
 header {
   // border-bottom: 1px solid black;
@@ -31,16 +37,18 @@ header {
       align-items: center;
 
       p {
-        color: $secondColor;
+        @include mixins.text-p;
+      }
+
+      span {
+        @include mixins.text-p;
+        font-weight: 600;
+        color: variables.$primary-color;
       }
 
       img {
         padding-right: 9px;
       }
-    }
-
-    span {
-      color: $primaryColor;
     }
   }
 
@@ -63,6 +71,10 @@ header {
         background-image: url(../assets/header/mid/MagnifyingGlass.png);
         background-repeat: no-repeat;
         background-position: 96%;
+
+        &::placeholder {
+          @include mixins.text-m;
+        }
       }
     }
 
@@ -88,7 +100,12 @@ header {
         a {
           display: flex;
           align-items: center;
-          color: $secondColor;
+          @include mixins.text-p;
+          font-weight: 600;
+
+          span {
+            color: variables.$primary-color;
+          }
 
           img {
             padding-right: 10px;
@@ -117,33 +134,24 @@ header {
       left: 144px;
 
       p {
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 60px;
-        color: #fff;
+        @include mixins.title-g
       }
 
       button {
+        @include mixins.text-btn;
+        @include mixins.btn;
         margin-top: 2rem;
         width: 131px;
-        height: 48px;
-        border: none;
-        border-radius: 10px;
-        background-color: $primaryColor;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
       }
     }
   }
 }
 
 #categories {
-  max-width: 90%;
-  margin: 80px auto;
+  @include mixins.container;
 
   h1 {
-    color: #4D4D4D;
+    @include mixins.title-m;
     margin-bottom: 24px;
   }
 
@@ -159,8 +167,9 @@ header {
     }
 
     figcaption {
+      @include mixins.text-g;
+      font-weight: 500;
       margin-top: 16px;
-      color: $secondColor;
       text-align: center;
     }
   }
@@ -173,23 +182,22 @@ header {
 }
 
 #brand {
-  max-width: 90%;
-  margin: 80px auto;
+  @include mixins.container;
 
   .brand-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border: $bd;
     margin-bottom: 32px;
 
     h1 {
-      color: #4D4D4D;
+      @include mixins.title-m;
     }
 
     a {
-      color: $primaryColor;
-      border-bottom: 1px solid $primaryColor;
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
     }
   }
 
@@ -228,24 +236,10 @@ header {
         width: 250px;
         margin: 0 0 40px 40px;
 
-        h1 {
-          font-weight: 700;
-          font-size: 32px;
-          line-height: 48px;
-        }
-
-        p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-        }
-
         button {
-          height: 48px;
-          background-color: $primaryColor;
-          border: none;
-          border-radius: 10px;
-          color: #fff;
+          @include mixins.btn;
+          @include mixins.text-btn;
+          margin-top: 32px;
         }
       }
     }
@@ -253,9 +247,15 @@ header {
     .card-1 {
       background-image: url(../assets/brand/parceiros.png);
 
-      h1,
+      h1 {
+        @include mixins.title-g;
+        font-weight: 700;
+      }
+
       p {
-        color: #fff;
+        @include mixins.text-g;
+        color: #f0f0f0;
+        margin-top: 8px;
       }
 
       button {
@@ -269,15 +269,16 @@ header {
     }
 
     .card-2 {
-      background-color: #FEF6E7;
+      background-color: variables.$second-color;
       justify-content: space-between;
 
       h1 {
-        color: #4D4D4D;
+        @include mixins.title-m;
       }
 
       p {
-        color: #9F9F9F;
+        @include mixins.text-g;
+        margin-top: 16px;
       }
 
       button {
@@ -294,10 +295,10 @@ header {
 }
 
 #blog {
-  max-width: 90%;
-  margin: 80px auto;
+  @include mixins.container;
 
   h1 {
+    @include mixins.title-m;
     margin-bottom: 32px;
   }
 
@@ -309,7 +310,7 @@ header {
   figure {
     width: 277px;
     border-radius: 15px;
-    background-color: #FEF6E7;
+    background-color: variables.$second-color;
 
     img {
       border-radius: 15px 15px 0 0;
@@ -320,25 +321,26 @@ header {
       margin: 0 auto;
 
       h1 {
+        @include mixins.title-p;
         margin-top: 20px;
       }
 
+      p {
+        @include mixins.text-m;
+      }
+
       button {
-        margin: 20px 0;
+        margin: 24px 0;
         width: 150px;
-        height: 48px;
-        background-color: $primaryColor;
-        border: none;
-        border-radius: 10px;
-        color: #fff;
+        @include mixins.btn;
+        @include mixins.text-btn;
       }
     }
   }
 }
 
 #instagram {
-  max-width: 90%;
-  margin: 80px auto;
+  @include mixins.container;
 
   .instagram-title {
     display: flex;
@@ -347,12 +349,13 @@ header {
     margin-bottom: 32px;
 
     h1 {
-      color: #4D4D4D;
+      @include mixins.title-m;
     }
 
     a {
-      color: $primaryColor;
-      border-bottom: 1px solid $primaryColor;
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
     }
   }
 
@@ -362,8 +365,7 @@ header {
 }
 
 #newsletter {
-  max-width: 90%;
-  margin: 80px auto;
+  @include mixins.container;
 
   div {
     text-align: center;
@@ -375,12 +377,16 @@ header {
     align-items: center;
     width: 772px;
     margin: 0 auto;
-    background-color: #FEF6E7;
+    background-color: variables.$second-color;
 
     h1 {
       width: 320px;
       margin: 40px 0 20px 0;
       text-align: center;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: variables.$second-text-color;
     }
 
     #name {
@@ -391,10 +397,11 @@ header {
       background-image: url(../assets/form/User.png);
       background-repeat: no-repeat;
       background-position: 15px;
-    }
 
-    #name::placeholder {
-      padding-left: 60px;
+      &::placeholder {
+        padding-left: 60px;
+        @include mixins.text-m;
+      }
     }
 
     #email {
@@ -406,20 +413,21 @@ header {
       background-image: url(../assets/form/EnvelopeSimple.png);
       background-repeat: no-repeat;
       background-position: 15px;
-    }
 
-    #email::placeholder {
-      padding-left: 60px;
+      &::placeholder {
+        padding-left: 60px;
+        @include mixins.text-m;
+      }
     }
 
     button {
       width: 145px;
       margin: 32px 0;
+      @include mixins.btn;
+      @include mixins.text-btn;
       height: 40px;
-      background-color: $primaryColor;
-      border: none;
-      border-radius: 10px;
-      color: #fff;
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 }
@@ -433,23 +441,20 @@ footer {
     "area1 area3 area3"
   ;
   color: #fff;
-  background-color: $primaryColor;
+  background-color: variables.$primary-color;
+
+  h1 {
+    @include mixins.title-footer;
+    text-align: center;
+  }
 
   a {
     color: #fff;
   }
 
-  h1 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-  }
-
   .area1 {
     grid-area: area1;
     border-right: 1px solid #fff;
-    height: 604px;
 
     .social-media {
       margin: 0 auto;
@@ -457,7 +462,6 @@ footer {
       h1 {
         margin: 48px auto 32px;
         width: 256px;
-        // border: $bd;
       }
 
       ul {
@@ -465,7 +469,6 @@ footer {
         margin: 0 auto;
         width: 140px;
 
-        // border: $bd;
         li {
           padding-right: 32px;
         }
@@ -478,12 +481,12 @@ footer {
       }
 
       p {
+        @include mixins.text-p;
         margin: 0 auto;
-        width: 270px;
+        width: 290px;
         text-align: center;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 21px;
+        color: #f0f0f0;
       }
     }
 
@@ -492,30 +495,80 @@ footer {
   .area2 {
     grid-area: area2;
     border-bottom: 1px solid #fff;
-    height: 470px;
+
+    span {
+      @include mixins.title-p;
+      color: #f0f0f0;
+    }
 
     .links {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+
+      ul {
+        margin-top: 56px;
+      }
+
+      &-primary {
+        margin-bottom: 20px;
+      }
+
+      a {
+        @include mixins.text-m;
+        color: #f0f0f0;
+      }
     }
 
     .payments {
       display: flex;
+      justify-content: space-between;
+      margin: 31px 0 40px;
+
+      .payments-card-1 {
+        margin-left: 50px;
+      }
+
+      .payments-card-2 {
+        margin-right: 173px;
+      }
 
       ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        margin-top: 24px;
 
         li {
           padding: 0 15px 5px 0;
         }
+      }
+
+      figure {
+        margin-top: 24px;
       }
     }
   }
 
   .area3 {
     grid-area: area3;
-    height: 134px;
     display: flex;
+    padding: 40px 0;
+    align-items: center;
+
+    .area3-card-1 {
+      margin-left: 50px;
+    }
+
+    .area3-card-2 {
+      margin-left: 270px;
+
+      img {
+        margin-right: 32px;
+      }
+    }
+
+    p {
+      @include mixins.text-p;
+      color: #f0f0f0;
+    }
   }
 }

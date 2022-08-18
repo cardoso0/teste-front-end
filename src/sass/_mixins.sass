@@ -1,0 +1,62 @@
+@use 'variables'
+
+@mixin container
+  max-width: 90%
+  margin: 80px auto
+
+@mixin text-p
+  font-weight: 500
+  font-size: 12px
+  line-height: 18px
+  color: variables.$primary-text-color
+
+@mixin text-m
+  font-weight: 500
+  font-size: 14px
+  line-height: 21px
+  color: variables.$primary-text-color
+
+@mixin text-g
+  font-weight: 400
+  font-size: 16px
+  line-height: 24px
+  color: variables.$primary-text-color
+
+@mixin title-p
+  font-weight: 700
+  font-size: 20px
+  line-height: 30px
+  color: variables.$second-text-color
+
+@mixin title-m
+  font-weight: 700
+  font-size: 32px
+  line-height: 48px
+  color: variables.$second-text-color
+
+@mixin title-g
+  font-weight: 800
+  font-size: 40px
+  line-height: 60px
+  color: #f0f0f0
+
+@mixin title-footer
+  font-weight: 700
+  font-size: 24px
+  line-height: 36px
+  color: #f0f0f0
+
+@mixin text-btn
+  font-weight: 900
+  font-size: 16px
+  line-height: 24px
+  text-align: center
+  letter-spacing: 0.08em
+  color: #f0f0f0
+
+@mixin btn
+  height: 48px
+  background: variables.$primary-color
+  border: 1px solid variables.$btn-border-color
+  border-radius: 10px
+  cursor: pointer
