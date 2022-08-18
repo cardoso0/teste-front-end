@@ -46,7 +46,7 @@ header .header-mid {
   border-bottom: 2px solid #F0F0F0;
 }
 header .header-mid form input {
-  width: 657px;
+  max-width: 657px;
   height: 48px;
   border: none;
   border-radius: 15px;
@@ -372,13 +372,15 @@ header nav ul li a img {
   margin: 80px auto;
 }
 #newsletter div {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 #newsletter form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 772px;
+  border-radius: 20px;
+  max-width: 772px;
   margin: 0 auto;
   background-color: #FEF6E7;
 }
