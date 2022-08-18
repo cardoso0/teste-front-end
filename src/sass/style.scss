@@ -269,7 +269,7 @@ header {
     }
 
     .card-2 {
-      background-color: #FEF6E7;
+      background-color: variables.$second-color;
       justify-content: space-between;
 
       h1 {
@@ -298,6 +298,7 @@ header {
   @include mixins.container;
 
   h1 {
+    @include mixins.title-m;
     margin-bottom: 32px;
   }
 
@@ -309,7 +310,7 @@ header {
   figure {
     width: 277px;
     border-radius: 15px;
-    background-color: #FEF6E7;
+    background-color: variables.$second-color;
 
     img {
       border-radius: 15px 15px 0 0;
@@ -320,17 +321,19 @@ header {
       margin: 0 auto;
 
       h1 {
+        @include mixins.title-p;
         margin-top: 20px;
       }
 
+      p {
+        @include mixins.text-m;
+      }
+
       button {
-        margin: 20px 0;
+        margin: 24px 0;
         width: 150px;
-        height: 48px;
-        background-color: $primaryColor;
-        border: none;
-        border-radius: 10px;
-        color: #fff;
+        @include mixins.btn;
+        @include mixins.text-btn;
       }
     }
   }
