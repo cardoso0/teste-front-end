@@ -24,11 +24,11 @@ header .header-top div {
 header .header-top div p {
   color: #9F9F9F;
 }
+header .header-top div span {
+  color: #FBB900;
+}
 header .header-top div img {
   padding-right: 9px;
-}
-header .header-top span {
-  color: #FBB900;
 }
 header .header-mid {
   display: flex;
@@ -305,6 +305,10 @@ header nav ul li a img {
   width: 320px;
   margin: 40px 0 20px 0;
   text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #4D4D4D;
 }
 #newsletter form #name {
   width: 343px;
@@ -314,12 +318,6 @@ header nav ul li a img {
   background-image: url(../assets/form/User.png);
   background-repeat: no-repeat;
   background-position: 15px;
-}
-#newsletter form #name::-moz-placeholder {
-  padding-left: 60px;
-}
-#newsletter form #name:-ms-input-placeholder {
-  padding-left: 60px;
 }
 #newsletter form #name::placeholder {
   padding-left: 60px;
@@ -333,12 +331,6 @@ header nav ul li a img {
   background-image: url(../assets/form/EnvelopeSimple.png);
   background-repeat: no-repeat;
   background-position: 15px;
-}
-#newsletter form #email::-moz-placeholder {
-  padding-left: 60px;
-}
-#newsletter form #email:-ms-input-placeholder {
-  padding-left: 60px;
 }
 #newsletter form #email::placeholder {
   padding-left: 60px;
@@ -423,4 +415,6 @@ footer .area3 {
   grid-area: area3;
   height: 134px;
   display: flex;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
