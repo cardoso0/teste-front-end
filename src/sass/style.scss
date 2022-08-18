@@ -148,7 +148,7 @@ header {
   @include mixins.container;
 
   h1 {
-    color: #4D4D4D;
+    @include mixins.title-m;
     margin-bottom: 24px;
   }
 
@@ -164,8 +164,9 @@ header {
     }
 
     figcaption {
+      @include mixins.text-g;
+      font-weight: 500;
       margin-top: 16px;
-      color: $secondColor;
       text-align: center;
     }
   }
