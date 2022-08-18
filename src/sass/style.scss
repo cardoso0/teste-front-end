@@ -1,6 +1,4 @@
 $bd: 1px solid #000;
-$primaryColor: #FBB900;
-$secondColor: #9F9F9F;
 
 @use 'variables';
 @use 'mixins';
@@ -14,13 +12,14 @@ $secondColor: #9F9F9F;
   list-style: none;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-
 }
 
-
 header {
-  // border-bottom: 1px solid black;
-  // border-radius: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
+  border-radius: 0px 0px 10px 10px;
 
   .header-container {
     max-width: 90%;
@@ -56,15 +55,16 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
-    border-top: 2px solid #F0F0F0;
+    border-top: 1px solid #F0F0F0;
     border-bottom: 2px solid #F0F0F0;
 
     form {
+      width: 657px;
 
       input {
-        width: 657px;
+        width: 100%;
         height: 48px;
-        border: none;
+        border: $bd;
         border-radius: 15px;
         padding-left: 24px;
         background-color: #FEF6E7;
@@ -119,19 +119,18 @@ header {
 #banner {
 
   figure {
-    position: relative;
-
-    img {
-      width: 100%;
-
-    }
+    // position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/banner.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 520px;
 
     figcaption {
       width: 387px;
       height: 252px;
-      position: absolute;
-      top: 119px;
-      left: 144px;
+      margin-left: 144px;
 
       p {
         @include mixins.title-g
@@ -254,7 +253,7 @@ header {
 
       p {
         @include mixins.text-g;
-        color: #f0f0f0;
+        color: #fff;
         margin-top: 8px;
       }
 
@@ -368,14 +367,16 @@ header {
   @include mixins.container;
 
   div {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 772px;
+    border-radius: 20px;
+    max-width: 772px;
     margin: 0 auto;
     background-color: variables.$second-color;
 
@@ -486,7 +487,7 @@ footer {
         width: 290px;
         text-align: center;
         font-weight: 400;
-        color: #f0f0f0;
+        color: #fff;
       }
     }
 
@@ -498,7 +499,7 @@ footer {
 
     span {
       @include mixins.title-p;
-      color: #f0f0f0;
+      color: #fff;
     }
 
     .links {
@@ -515,7 +516,7 @@ footer {
 
       a {
         @include mixins.text-m;
-        color: #f0f0f0;
+        color: #fff;
       }
     }
 
@@ -568,7 +569,7 @@ footer {
 
     p {
       @include mixins.text-p;
-      color: #f0f0f0;
+      color: #fff;
     }
   }
 }
