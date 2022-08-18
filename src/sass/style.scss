@@ -12,7 +12,6 @@ $bd: 1px solid #000;
   list-style: none;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-
 }
 
 header {
@@ -57,11 +56,12 @@ header {
     border-bottom: 2px solid #F0F0F0;
 
     form {
+      width: 657px;
 
       input {
-        max-width: 657px;
+        width: 100%;
         height: 48px;
-        border: none;
+        border: $bd;
         border-radius: 15px;
         padding-left: 24px;
         background-color: #FEF6E7;
