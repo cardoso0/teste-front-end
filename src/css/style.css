@@ -167,9 +167,61 @@ header nav ul li a img {
 }
 
 #vitrine {
-  text-align: center;
-  border: 1px solid #000;
+  max-width: 90%;
+  margin: 80px auto;
   height: 400px;
+}
+#vitrine div {
+  display: flex;
+  justify-content: space-between;
+}
+#vitrine div h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #4D4D4D;
+}
+#vitrine div ul {
+  display: flex;
+}
+#vitrine div ul li {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #E5E5E5;
+  margin-right: 16px;
+}
+#vitrine div ul li a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9F;
+  font-weight: 700;
+}
+#vitrine div .selected {
+  background-color: #FBB900;
+}
+#vitrine div .selected a {
+  color: #fff;
+}
+#vitrine .vitrine-content {
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+}
+#vitrine a {
+  display: flex;
+  justify-content: center;
+}
+#vitrine a span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4D4D4D;
+  text-decoration-line: underline;
+  color: #FBB900;
 }
 
 #brand {

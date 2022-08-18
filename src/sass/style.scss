@@ -175,9 +175,62 @@ header {
 }
 
 #vitrine {
-  text-align: center;
-  border: $bd;
+  @include mixins.container;
   height: 400px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      @include mixins.title-m;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid #E5E5E5;
+        // background-color: variables.$primary-color;
+        margin-right: 16px;
+
+        a {
+          @include mixins.text-m;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .selected {
+      background-color: variables.$primary-color;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .vitrine-content {
+    width: 100%;
+    height: 300px;
+    background-color: gray;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+
+    span {
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
+    }
+  }
 }
 
 #brand {
