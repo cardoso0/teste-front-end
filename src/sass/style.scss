@@ -131,22 +131,14 @@ header {
       left: 144px;
 
       p {
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 60px;
-        color: #fff;
+        @include mixins.title-g
       }
 
       button {
+        @include mixins.text-btn;
+        @include mixins.btn;
         margin-top: 2rem;
         width: 131px;
-        height: 48px;
-        border: none;
-        border-radius: 10px;
-        background-color: $primaryColor;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
       }
     }
   }

@@ -110,18 +110,22 @@ header nav ul li a img {
   font-weight: 800;
   font-size: 40px;
   line-height: 60px;
-  color: #fff;
+  color: #f0f0f0;
 }
 #banner figure figcaption button {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #f0f0f0;
+  height: 48px;
+  background: #FBB900;
+  border: 1px solid #F0D075;
+  border-radius: 10px;
+  cursor: pointer;
   margin-top: 2rem;
   width: 131px;
-  height: 48px;
-  border: none;
-  border-radius: 10px;
-  background-color: #FBB900;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 #categories {
