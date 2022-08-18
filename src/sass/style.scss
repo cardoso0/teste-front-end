@@ -349,12 +349,13 @@ header {
     margin-bottom: 32px;
 
     h1 {
-      color: #4D4D4D;
+      @include mixins.title-m;
     }
 
     a {
-      color: $primaryColor;
-      border-bottom: 1px solid $primaryColor;
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
     }
   }
 

@@ -350,11 +350,18 @@ header nav ul li a img {
   margin-bottom: 32px;
 }
 #instagram .instagram-title h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
   color: #4D4D4D;
 }
 #instagram .instagram-title a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4D4D4D;
+  text-decoration-line: underline;
   color: #FBB900;
-  border-bottom: 1px solid #FBB900;
 }
 #instagram ul {
   display: flex;
