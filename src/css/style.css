@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
   font-family: "Poppins", sans-serif;
 }
 
@@ -173,11 +173,18 @@ header nav ul li a img {
   margin-bottom: 32px;
 }
 #brand .brand-title h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
   color: #4D4D4D;
 }
 #brand .brand-title a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4D4D4D;
+  text-decoration-line: underline;
   color: #FBB900;
-  border-bottom: 1px solid #FBB900;
 }
 #brand ul {
   display: flex;
@@ -211,29 +218,37 @@ header nav ul li a img {
   width: 250px;
   margin: 0 0 40px 40px;
 }
-#brand .brand-cards figure figcaption h1 {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 48px;
-}
-#brand .brand-cards figure figcaption p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
 #brand .brand-cards figure figcaption button {
   height: 48px;
-  background-color: #FBB900;
-  border: none;
+  background: #FBB900;
+  border: 1px solid #F0D075;
   border-radius: 10px;
-  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #f0f0f0;
+  margin-top: 32px;
 }
 #brand .brand-cards .card-1 {
   background-image: url(../assets/brand/parceiros.png);
 }
-#brand .brand-cards .card-1 h1,
+#brand .brand-cards .card-1 h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 60px;
+  color: #f0f0f0;
+  font-weight: 700;
+}
 #brand .brand-cards .card-1 p {
-  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9F9F9F;
+  color: #f0f0f0;
+  margin-top: 8px;
 }
 #brand .brand-cards .card-1 button {
   width: 131px;
@@ -247,10 +262,17 @@ header nav ul li a img {
   justify-content: space-between;
 }
 #brand .brand-cards .card-2 h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
   color: #4D4D4D;
 }
 #brand .brand-cards .card-2 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   color: #9F9F9F;
+  margin-top: 16px;
 }
 #brand .brand-cards .card-2 button {
   width: 156px;

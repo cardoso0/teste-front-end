@@ -5,13 +5,14 @@ $secondColor: #9F9F9F;
 @use 'variables';
 @use 'mixins';
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
   font-family: 'Poppins', sans-serif;
 
 }
@@ -70,6 +71,7 @@ header {
         background-image: url(../assets/header/mid/MagnifyingGlass.png);
         background-repeat: no-repeat;
         background-position: 96%;
+
         &::placeholder {
           @include mixins.text-m;
         }
@@ -104,6 +106,7 @@ header {
           span {
             color: variables.$primary-color;
           }
+
           img {
             padding-right: 10px;
           }
@@ -185,16 +188,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border: $bd;
     margin-bottom: 32px;
 
     h1 {
-      color: #4D4D4D;
+      @include mixins.title-m;
     }
 
     a {
-      color: $primaryColor;
-      border-bottom: 1px solid $primaryColor;
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
     }
   }
 
@@ -233,24 +236,10 @@ header {
         width: 250px;
         margin: 0 0 40px 40px;
 
-        h1 {
-          font-weight: 700;
-          font-size: 32px;
-          line-height: 48px;
-        }
-
-        p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-        }
-
         button {
-          height: 48px;
-          background-color: $primaryColor;
-          border: none;
-          border-radius: 10px;
-          color: #fff;
+          @include mixins.btn;
+          @include mixins.text-btn;
+          margin-top: 32px;
         }
       }
     }
@@ -258,9 +247,15 @@ header {
     .card-1 {
       background-image: url(../assets/brand/parceiros.png);
 
-      h1,
+      h1 {
+        @include mixins.title-g;
+        font-weight: 700;
+      }
+
       p {
-        color: #fff;
+        @include mixins.text-g;
+        color: #f0f0f0;
+        margin-top: 8px;
       }
 
       button {
@@ -278,11 +273,12 @@ header {
       justify-content: space-between;
 
       h1 {
-        color: #4D4D4D;
+        @include mixins.title-m;
       }
 
       p {
-        color: #9F9F9F;
+        @include mixins.text-g;
+        margin-top: 16px;
       }
 
       button {
