@@ -402,6 +402,10 @@ header nav ul li a img {
 }
 #newsletter form #name::placeholder {
   padding-left: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9F;
 }
 #newsletter form #email {
   width: 343px;
@@ -415,15 +419,28 @@ header nav ul li a img {
 }
 #newsletter form #email::placeholder {
   padding-left: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9F;
 }
 #newsletter form button {
   width: 145px;
   margin: 32px 0;
-  height: 40px;
-  background-color: #FBB900;
-  border: none;
+  height: 48px;
+  background: #FBB900;
+  border: 1px solid #F0D075;
   border-radius: 10px;
-  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #f0f0f0;
+  height: 40px;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 footer {

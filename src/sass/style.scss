@@ -377,7 +377,7 @@ header {
     align-items: center;
     width: 772px;
     margin: 0 auto;
-    background-color: #FEF6E7;
+    background-color: variables.$second-color;
 
     h1 {
       width: 320px;
@@ -386,7 +386,7 @@ header {
       font-weight: 700;
       font-size: 24px;
       line-height: 36px;
-      color: #4D4D4D;
+      color: variables.$second-text-color;
     }
 
     #name {
@@ -397,10 +397,11 @@ header {
       background-image: url(../assets/form/User.png);
       background-repeat: no-repeat;
       background-position: 15px;
-    }
 
-    #name::placeholder {
-      padding-left: 60px;
+      &::placeholder {
+        padding-left: 60px;
+        @include mixins.text-m;
+      }
     }
 
     #email {
@@ -412,20 +413,21 @@ header {
       background-image: url(../assets/form/EnvelopeSimple.png);
       background-repeat: no-repeat;
       background-position: 15px;
-    }
 
-    #email::placeholder {
-      padding-left: 60px;
+      &::placeholder {
+        padding-left: 60px;
+        @include mixins.text-m;
+      }
     }
 
     button {
       width: 145px;
       margin: 32px 0;
+      @include mixins.btn;
+      @include mixins.text-btn;
       height: 40px;
-      background-color: $primaryColor;
-      border: none;
-      border-radius: 10px;
-      color: #fff;
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 }
