@@ -1,0 +1,726 @@
+$bd: 1px solid #000;
+
+@use 'variables';
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
+  border-radius: 0px 0px 10px 10px;
+
+  .header-container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 0;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      p {
+        @include mixins.text-p;
+      }
+
+      span {
+        @include mixins.text-p;
+        font-weight: 600;
+        color: variables.$primary-color;
+      }
+
+      img {
+        padding-right: 9px;
+      }
+    }
+  }
+
+  .header-mid {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 2px solid #F0F0F0;
+
+    form {
+      width: 657px;
+
+      input {
+        width: 100%;
+        height: 48px;
+        border: $bd;
+        border-radius: 15px;
+        padding-left: 24px;
+        background-color: #FEF6E7;
+        background-image: url(../assets/header/mid/MagnifyingGlass.png);
+        background-repeat: no-repeat;
+        background-position: 96%;
+
+        &::placeholder {
+          @include mixins.text-m;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        padding-left: 32px;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        padding: 11px 0;
+
+        a {
+          display: flex;
+          align-items: center;
+          @include mixins.text-p;
+          font-weight: 600;
+
+          span {
+            color: variables.$primary-color;
+          }
+
+          img {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#banner {
+
+  figure {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/banner.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 520px;
+
+    figcaption {
+      width: 387px;
+      height: 252px;
+      margin-left: 144px;
+
+      p {
+        @include mixins.title-g
+      }
+
+      button {
+        @include mixins.text-btn;
+        @include mixins.btn;
+        margin-top: 2rem;
+        width: 131px;
+      }
+    }
+  }
+}
+
+#categories {
+  @include mixins.container;
+
+  h1 {
+    @include mixins.title-m;
+    margin-bottom: 24px;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  figure {
+
+    img {
+      border-radius: 15px;
+    }
+
+    figcaption {
+      @include mixins.text-g;
+      font-weight: 500;
+      margin-top: 16px;
+      text-align: center;
+    }
+  }
+}
+
+#vitrine {
+  @include mixins.container;
+  height: 400px;
+
+  .vitrine-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    h1 {
+      @include mixins.title-m;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid #E5E5E5;
+        margin-right: 16px;
+
+        a {
+          @include mixins.text-m;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .selected {
+      background-color: variables.$primary-color;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  #vitrine-content {
+    // width: 100%;
+    // height: 300px;
+    // background-color: gray;
+
+    .vitrine-content-list {
+      display: flex;
+
+    }
+
+    li {
+      margin-right: 70px;
+
+      .vitrine-content-top {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          width: 100px;
+          height: 40px;
+          background: #FEF6E7;
+          border-radius: 6px;
+          margin-right: 100px;
+          color: variables.$primary-color;
+          border: none;
+          font-weight: 700;
+        }
+      }
+
+      figure {
+        div {
+          text-align: center;
+        }
+
+        figcaption {
+          @include mixins.text-m;
+          color: variables.$second-text-color;
+          font-weight: 300;
+          width: 145px;
+          height: 42px;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+      }
+
+      .vitrine-content-priece {
+        .container-price {
+          margin-top: 15px;
+
+          .price-old {
+            @include mixins.text-g;
+            text-align: center;
+            text-decoration-line: line-through;
+
+          }
+
+          .price {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: variables.$second-text-color;
+
+            span {
+              font-size: 22px;
+              line-height: 33px;
+            }
+          }
+        }
+
+        .container-assinatura {
+          margin-top: 5px;
+          text-align: center;
+
+          .assinatura-1 {
+            @include mixins.text-g;
+            color: variables.$primary-color;
+            font-weight: 700;
+          }
+
+          .assinatura-2 {
+            @include mixins.text-p;
+            font-weight: 600;
+            color: variables.$second-text-color;
+          }
+        }
+      }
+
+      .price-btn {
+        @include mixins.btn;
+        @include mixins.text-btn;
+        width: 220px;
+      }
+    }
+  }
+
+
+
+
+
+
+  .vitrine-ver {
+    display: flex;
+    justify-content: center;
+
+    span {
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
+      margin: 40px 0;
+    }
+  }
+}
+
+#brand {
+  @include mixins.container;
+  margin-top: 250px;
+
+  .brand-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    h1 {
+      @include mixins.title-m;
+    }
+
+    a {
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    li {
+      width: 178px;
+      height: 178px;
+      box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
+      border-radius: 20px;
+      border: 1px solid #E5E5E5;
+      display: flex;
+      align-items: center;
+
+      a {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .brand-cards {
+    display: flex;
+    justify-content: space-between;
+
+    figure {
+      display: flex;
+      border-radius: 20px;
+      width: 574px;
+      height: 350px;
+      align-items: flex-end;
+
+      figcaption {
+        width: 250px;
+        margin: 0 0 40px 40px;
+
+        button {
+          @include mixins.btn;
+          @include mixins.text-btn;
+          margin-top: 32px;
+        }
+      }
+    }
+
+    .card-1 {
+      background-image: url(../assets/brand/parceiros.png);
+
+      h1 {
+        @include mixins.title-g;
+        font-weight: 700;
+      }
+
+      p {
+        @include mixins.text-g;
+        color: #fff;
+        margin-top: 8px;
+      }
+
+      button {
+        width: 131px;
+      }
+
+      img {
+        border-radius: 20px;
+        order: 2;
+      }
+    }
+
+    .card-2 {
+      background-color: variables.$second-color;
+      justify-content: space-between;
+
+      h1 {
+        @include mixins.title-m;
+      }
+
+      p {
+        @include mixins.text-g;
+        margin-top: 16px;
+      }
+
+      button {
+        width: 156px;
+      }
+
+      div {
+        display: flex;
+        align-items: flex-end;
+        order: 2;
+      }
+    }
+  }
+}
+
+#blog {
+  @include mixins.container;
+
+  h1 {
+    @include mixins.title-m;
+    margin-bottom: 32px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  figure {
+    width: 277px;
+    border-radius: 15px;
+    background-color: variables.$second-color;
+
+    img {
+      border-radius: 15px 15px 0 0;
+    }
+
+    figcaption {
+      width: 230px;
+      margin: 0 auto;
+
+      h1 {
+        @include mixins.title-p;
+        margin-top: 20px;
+      }
+
+      p {
+        @include mixins.text-m;
+      }
+
+      button {
+        margin: 24px 0;
+        width: 150px;
+        @include mixins.btn;
+        @include mixins.text-btn;
+      }
+    }
+  }
+}
+
+#instagram {
+  @include mixins.container;
+
+  .instagram-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    h1 {
+      @include mixins.title-m;
+    }
+
+    a {
+      @include mixins.title-p;
+      text-decoration-line: underline;
+      color: variables.$primary-color;
+    }
+  }
+
+  ul {
+    display: flex;
+  }
+}
+
+#newsletter {
+  @include mixins.container;
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    max-width: 772px;
+    margin: 0 auto;
+    background-color: variables.$second-color;
+
+    h1 {
+      width: 320px;
+      margin: 40px 0 20px 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: variables.$second-text-color;
+    }
+
+    #name {
+      width: 343px;
+      height: 48px;
+      border: 1px solid #E5E5E5;
+      border-radius: 10px;
+      background-image: url(../assets/form/User.png);
+      background-repeat: no-repeat;
+      background-position: 15px;
+
+      &::placeholder {
+        padding-left: 60px;
+        @include mixins.text-m;
+      }
+    }
+
+    #email {
+      width: 343px;
+      height: 48px;
+      border: 1px solid #E5E5E5;
+      border-radius: 10px;
+      margin-top: 10px;
+      background-image: url(../assets/form/EnvelopeSimple.png);
+      background-repeat: no-repeat;
+      background-position: 15px;
+
+      &::placeholder {
+        padding-left: 60px;
+        @include mixins.text-m;
+      }
+    }
+
+    button {
+      width: 145px;
+      margin: 32px 0;
+      @include mixins.btn;
+      @include mixins.text-btn;
+      height: 40px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  grid-template-areas:
+    "area1 area2 area2"
+    "area1 area2 area2"
+    "area1 area3 area3"
+  ;
+  color: #fff;
+  background-color: variables.$primary-color;
+
+  h1 {
+    @include mixins.title-footer;
+    text-align: center;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .area1 {
+    grid-area: area1;
+    border-right: 1px solid #fff;
+
+    .social-media {
+      margin: 0 auto;
+
+      h1 {
+        margin: 48px auto 32px;
+        width: 256px;
+      }
+
+      ul {
+        display: flex;
+        margin: 0 auto;
+        width: 140px;
+
+        li {
+          padding-right: 32px;
+        }
+      }
+    }
+
+    .about {
+      h1 {
+        margin: 56px 0 24px;
+      }
+
+      p {
+        @include mixins.text-p;
+        margin: 0 auto;
+        width: 290px;
+        text-align: center;
+        font-weight: 400;
+        color: #fff;
+      }
+    }
+
+  }
+
+  .area2 {
+    grid-area: area2;
+    border-bottom: 1px solid #fff;
+
+    span {
+      @include mixins.title-p;
+      color: #fff;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-around;
+
+      ul {
+        margin-top: 56px;
+      }
+
+      &-primary {
+        margin-bottom: 20px;
+      }
+
+      a {
+        @include mixins.text-m;
+        color: #fff;
+      }
+    }
+
+    .payments {
+      display: flex;
+      justify-content: space-between;
+      margin: 31px 0 40px;
+
+      .payments-card-1 {
+        margin-left: 50px;
+      }
+
+      .payments-card-2 {
+        margin-right: 173px;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 24px;
+
+        li {
+          padding: 0 15px 5px 0;
+        }
+      }
+
+      figure {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .area3 {
+    grid-area: area3;
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+
+    .area3-card-1 {
+      margin-left: 50px;
+    }
+
+    .area3-card-2 {
+      margin-left: 270px;
+
+      img {
+        margin-right: 32px;
+      }
+    }
+
+    p {
+      @include mixins.text-p;
+      color: #fff;
+    }
+  }
+}
