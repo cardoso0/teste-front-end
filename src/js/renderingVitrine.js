@@ -1,13 +1,13 @@
-const productsLi = (item) => {
+const productsLi = (item, index) => {
   $('.vitrine-content-list').append(
     `<li>
   <div class="vitrine-content-top">
     <button>40% OFF</button>
     <a href="#"><img src="./src/assets/header/mid/Heart.png" alt=""></a>
   </div>
-  <figure>
-    <div><img src="${item.photo}" alt=""></div>
-    <figcaption>${item.productName}</figcaption>
+  <figure onclick="handleClick(event)">
+    <div><img class="${index}" src="${item.photo}" alt=""></div>
+    <figcaption class="product-name">${item.productName}</figcaption>
   </figure>
   <div class="vitrine-content-priece">
     <div class="container-price">
@@ -19,16 +19,15 @@ const productsLi = (item) => {
       <p class="assinatura-2">Para assinantes</p>
     </div>
   </div>
-  <button class="price-btn ${item.productName}" onClick="handleClick(event)">ADICIONAR</button>
+  <button class="price-btn" >ADICIONAR</button>
 </li>`
   )
 }
 
 const displayVitrine = async () => {
   const products = await getProducts()
-  // console.log(products)
-  products.forEach(item => {
-    productsLi(item)
+  products.forEach((item, index) => {
+    productsLi(item, index)
   })
 }
 displayVitrine()
