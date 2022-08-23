@@ -20,12 +20,6 @@ $('#brand-container').slick({
   slidesToScroll: 2,
 });
 
-$('.card-container').slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 2,
-});
-
 $('#instagram-container').slick({
   infinite: true,
   slidesToShow: 5,
