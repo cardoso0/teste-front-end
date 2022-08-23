@@ -11,6 +11,7 @@
 
 header {
   position: sticky;
+  z-index: 1;
   top: 0;
   background-color: #fff;
   box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
@@ -213,6 +214,9 @@ header nav ul li a img {
 }
 #vitrine #vitrine-content li {
   margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #vitrine #vitrine-content li .vitrine-content-top {
   display: flex;
@@ -227,6 +231,9 @@ header nav ul li a img {
   color: #FBB900;
   border: none;
   font-weight: 700;
+}
+#vitrine #vitrine-content li figure {
+  cursor: pointer;
 }
 #vitrine #vitrine-content li figure div {
   text-align: center;
@@ -721,6 +728,7 @@ footer .area3 p {
 }
 
 .modal-wrapper {
+  z-index: 1;
   display: none;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
