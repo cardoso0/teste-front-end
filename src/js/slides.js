@@ -25,3 +25,9 @@ $('.card-container').slick({
   slidesToShow: 4,
   slidesToScroll: 2,
 });
+
+$('#instagram-container').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 2,
+});

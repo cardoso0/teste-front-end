@@ -523,6 +523,9 @@ header nav ul li a img {
   text-decoration-line: underline;
   color: #FBB900;
 }
+#instagram #instagram-container {
+  padding-right: 25px;
+}
 #instagram ul {
   display: flex;
 }
