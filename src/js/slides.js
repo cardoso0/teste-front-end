@@ -13,3 +13,9 @@ $('#categories-container').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
 });
+
+$('#brand-container').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 2,
+});
