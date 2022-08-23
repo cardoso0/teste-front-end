@@ -45,9 +45,9 @@
 }
 
 .slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
+/* .slick-prev:focus, */
+.slick-next:hover {
+/* .slick-next:focus { */
   color: transparent;
   outline: none;
   background: #FBB900;
