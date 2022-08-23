@@ -60,7 +60,7 @@ header .header-mid form {
 header .header-mid form input {
   width: 100%;
   height: 48px;
-  border: 1px solid #000;
+  border: none;
   border-radius: 15px;
   padding-left: 24px;
   background-color: #FEF6E7;
