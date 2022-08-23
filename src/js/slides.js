@@ -19,3 +19,9 @@ $('#brand-container').slick({
   slidesToShow: 6,
   slidesToScroll: 2,
 });
+
+$('.card-container').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+});
