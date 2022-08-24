@@ -22,6 +22,7 @@ header {
   background-color: #fff;
   box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
   border-radius: 0px 0px 10px 10px;
+
   @include mixins.tablet {
     position: relative;
   }
@@ -29,6 +30,7 @@ header {
   .header-container {
     max-width: 90%;
     margin: 0 auto;
+
     @include mixins.tablet {
       max-width: 100%;
     }
@@ -65,6 +67,7 @@ header {
     padding: 12px 0;
     border-top: 1px solid #F0F0F0;
     border-bottom: 2px solid #F0F0F0;
+
     @include mixins.tablet {
       justify-content: space-around;
     }
@@ -75,6 +78,7 @@ header {
 
     form {
       width: 657px;
+
       @include mixins.tablet {
         min-width: 250px;
         max-width: 350px;
@@ -90,6 +94,7 @@ header {
         background-image: url(../assets/header/mid/MagnifyingGlass.png);
         background-repeat: no-repeat;
         background-position: 96%;
+
         @include mixins.tablet {
           padding-left: 10px;
           background-size: 8%;
@@ -112,7 +117,7 @@ header {
       li {
         display: flex;
         padding-left: 32px;
-        
+
         @include mixins.tablet {
           padding-left: 10px;
         }
@@ -125,6 +130,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       @include mixins.tablet {
         justify-content: space-around;
       }
@@ -160,20 +166,24 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 520px;
+
     @include mixins.tablet {
-    height: auto;
+      height: auto;
     }
 
     figcaption {
       width: 387px;
       height: 252px;
       margin-left: 144px;
+
       @include mixins.tablet {
         width: 350px;
         margin: 10px 0 0 20px;
       }
+
       p {
         @include mixins.title-g;
+
         @include mixins.tablet {
           @include mixins.title-m;
           color: #fff;
@@ -196,6 +206,7 @@ header {
   h1 {
     @include mixins.title-m;
     margin-bottom: 24px;
+    
   }
 
   div {
@@ -229,11 +240,15 @@ header {
 
     h1 {
       @include mixins.title-m;
+
     }
 
     ul {
       display: flex;
-
+      @include mixins.tablet {
+        flex-wrap: wrap;
+        justify-content: end;
+      }
       li {
         display: flex;
         align-items: center;
@@ -260,10 +275,10 @@ header {
   }
 
   #vitrine-content {
-
+  
     .vitrine-content-list {
       display: flex;
-
+     
     }
 
     li {
@@ -271,6 +286,9 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include mixins.tablet {
+        margin-left: 30px;
+      } 
 
       .vitrine-content-top {
         display: flex;
