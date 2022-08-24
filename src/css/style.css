@@ -623,6 +623,11 @@ header nav ul li a img {
 #instagram ul {
   display: flex;
 }
+@media (max-width: 768px) {
+  #instagram ul {
+    padding-left: 40px;
+  }
+}
 
 #newsletter {
   max-width: 90%;

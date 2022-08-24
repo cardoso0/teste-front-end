@@ -67,4 +67,14 @@ $('#instagram-container').slick({
   infinite: true,
   slidesToShow: 5,
   slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+  ]
 });

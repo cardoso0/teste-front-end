@@ -600,6 +600,10 @@ header {
 
   ul {
     display: flex;
+
+    @include mixins.tablet {
+      padding-left: 40px;
+    }
   }
 }
 
