@@ -154,7 +154,6 @@ header {
 #banner {
 
   figure {
-    // position: relative;
     display: flex;
     align-items: center;
     background-image: url(../assets/banner.png);
@@ -166,9 +165,18 @@ header {
       width: 387px;
       height: 252px;
       margin-left: 144px;
-
+      @include mixins.tablet {
+        width: 250px;
+        margin-left: 50px;
+        position: relative;
+        bottom: 125px;
+      }
       p {
-        @include mixins.title-g
+        @include mixins.title-g;
+        @include mixins.tablet {
+          @include mixins.title-m;
+          color: #fff;
+        }
       }
 
       button {

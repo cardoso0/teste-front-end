@@ -159,11 +159,28 @@ header nav ul li a img {
   height: 252px;
   margin-left: 144px;
 }
+@media (max-width: 768px) {
+  #banner figure figcaption {
+    width: 250px;
+    margin-left: 50px;
+    position: relative;
+    bottom: 125px;
+  }
+}
 #banner figure figcaption p {
   font-weight: 800;
   font-size: 40px;
   line-height: 60px;
   color: #fff;
+}
+@media (max-width: 768px) {
+  #banner figure figcaption p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #4D4D4D;
+    color: #fff;
+  }
 }
 #banner figure figcaption button {
   font-weight: 900;
