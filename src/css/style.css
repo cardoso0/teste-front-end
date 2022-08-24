@@ -137,6 +137,11 @@ header .header-mid ul li {
     padding-left: 10px;
   }
 }
+@media (max-width: 400px) {
+  header .header-mid ul li {
+    margin-right: 10px;
+  }
+}
 header nav ul {
   display: flex;
   justify-content: space-between;
@@ -150,11 +155,15 @@ header nav ul {
 @media (max-width: 400px) {
   header nav ul {
     flex-wrap: wrap;
-    margin-right: 5px;
   }
 }
 header nav ul li {
   padding: 11px 0;
+}
+@media (max-width: 400px) {
+  header nav ul li {
+    margin-right: 20px;
+  }
 }
 header nav ul li a {
   display: flex;

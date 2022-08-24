@@ -137,6 +137,9 @@ header {
         @include mixins.tablet {
           padding-left: 10px;
         }
+        @include mixins.mobile {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -154,11 +157,13 @@ header {
 
       @include mixins.mobile {
         flex-wrap: wrap;
-        margin-right: 5px;
       }
 
       li {
         padding: 11px 0;
+        @include mixins.mobile {
+          margin-right: 20px;
+        }
 
         a {
           display: flex;
