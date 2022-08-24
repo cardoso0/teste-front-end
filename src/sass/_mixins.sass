@@ -60,3 +60,20 @@
   border: 1px solid variables.$btn-border-color
   border-radius: 10px
   cursor: pointer
+
+@mixin modal-text
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 20px
+  line-height: 100%
+  letter-spacing: 0.05em
+  color: #041E50
+
+@mixin mobile
+  @media(max-width: 320px)
+    @content
+
+@mixin tablet
+  @media(max-width: 768px)
+    @content

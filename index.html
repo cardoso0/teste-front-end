@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
   <title>O Cãoselheiro - Loja</title>
 </head>
 
@@ -28,12 +29,12 @@
         </div>
       </section>
       <section class="header-mid">
-        <img src="./src/assets/header/mid/logo.png" alt="logo">
+        <img class="header-mid-logo" src="./src/assets/header/mid/logo.png" alt="logo">
         <form action="">
           <input type="text" placeholder="O que você está buscando?">
         </form>
         <ul>
-          <li><img src="./src/assets/header/mid/box.png" alt="box"></li>
+          <li class="header-mid-box"><img src="./src/assets/header/mid/box.png" alt="box"></li>
           <li><img src="./src/assets/header/mid/Heart.png" alt="heart"></li>
           <li><img src="./src/assets/header/mid/user.png" alt="user"></li>
           <li><img src="./src/assets/header/mid/ShoppingCart.png" alt="shopping cart"></li>
@@ -64,7 +65,7 @@
     </section>
     <section id="categories">
       <h1>Categorias</h1>
-      <div>
+      <div id="categories-container">
         <figure>
           <img src="./src/assets/categories/brinquedos.png" alt="cachorro com brinquedo">
           <figcaption>Brinquedos</figcaption>
@@ -81,6 +82,22 @@
           <img src="./src/assets/categories/higiene.png" alt="cachorro tomando banho">
           <figcaption>Higiene</figcaption>
         </figure>
+        <figure>
+          <img src="./src/assets/categories/brinquedos.png" alt="cachorro com brinquedo">
+          <figcaption>Brinquedos</figcaption>
+        </figure>
+        <figure>
+          <img src="./src/assets/categories/petiscos.png" alt="cachorro comendo petisco">
+          <figcaption>Petiscos</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="modal-wrapper">
+      <div class="modal">
+        <div class="modal-close">X</div>
+        <div class="modal-content">
+
+        </div>
       </div>
     </section>
     <section id="vitrine">
@@ -96,7 +113,7 @@
       </div>
       <div id="vitrine-content">
         <ul class="vitrine-content-list">
-          
+
         </ul>
       </div>
       <a href="#" class="vitrine-ver"><span>Ver todos</span></a>
@@ -106,7 +123,7 @@
         <h1>Principais marcas</h1>
         <span><a href="#">Ver todos</a></span>
       </div>
-      <ul>
+      <ul id="brand-container">
         <li>
           <a href="#"><img src="./src/assets/brand/buddy.png" alt="marca buddy"></a>
         </li>
@@ -118,6 +135,12 @@
         </li>
         <li>
           <a href="#"><img src="./src/assets/brand/buddy.png" alt="marca buddy"></a>
+        </li>
+        <li>
+          <a href="#"><img src="./src/assets/brand/pet games.png" alt="marca pet games"></a>
+        </li>
+        <li>
+          <a href="#"><img src="./src/assets/brand/kong.png" alt="marca kong"></a>
         </li>
         <li>
           <a href="#"><img src="./src/assets/brand/pet games.png" alt="marca pet games"></a>
@@ -186,21 +209,28 @@
         <h1>Instagram</h1>
         <span><a href="#">+Seguir</a></span>
       </div>
-      <ul>
+      <ul id="instagram-container">
         <li>
-          <a href="#"><img src="./src/assets/instagram/insta4.png" alt="marca buddy"></a>
+          <a href="#"><img src="./src/assets/instagram/insta4.png" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./src/assets/instagram/insta2.png" alt="marca pet games"></a>
+          <a href="#"><img src="./src/assets/instagram/insta2.png" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./src/assets/instagram/insta3.png" alt="marca kong"></a>
+          <a href="#"><img src="./src/assets/instagram/insta3.png" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./src/assets/instagram/insta4.png" alt="marca buddy"></a>
+          <a href="#"><img src="./src/assets/instagram/insta4.png" alt=""></a>
         </li>
         <li>
-          <a href="#"><img src="./src/assets/instagram/insta5.png" alt="marca pet games"></a>
+          <a href="#"><img src="./src/assets/instagram/insta5.png" alt=""></a>
+        </li>
+
+        <li>
+          <a href="#"><img src="./src/assets/instagram/insta4.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="./src/assets/instagram/insta2.png" alt=""></a>
         </li>
       </ul>
     </section>
@@ -290,14 +320,19 @@
       </div>
     </section>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
   <!-- Axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Slick -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script src="./src/js/getProducts.js"></script>
   <script src="./src/js/renderingVitrine.js"></script>
+  <script src="./src/js/slides.js"></script>
+  <script src="./src/js/modal.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@ $bd: 1px solid #000;
 @use 'mixins';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
 
 * {
   padding: 0;
@@ -16,14 +17,23 @@ $bd: 1px solid #000;
 
 header {
   position: sticky;
+  z-index: 1;
   top: 0;
   background-color: #fff;
   box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
   border-radius: 0px 0px 10px 10px;
 
+  @include mixins.tablet {
+    position: relative;
+  }
+
   .header-container {
     max-width: 90%;
     margin: 0 auto;
+
+    @include mixins.tablet {
+      max-width: 100%;
+    }
   }
 
   .header-top {
@@ -58,19 +68,37 @@ header {
     border-top: 1px solid #F0F0F0;
     border-bottom: 2px solid #F0F0F0;
 
+    @include mixins.tablet {
+      justify-content: space-around;
+    }
+
+    // .header-mid-logo {
+    //   margin-right: 40px;
+    // }
+
     form {
       width: 657px;
+
+      @include mixins.tablet {
+        min-width: 250px;
+        max-width: 350px;
+      }
 
       input {
         width: 100%;
         height: 48px;
-        border: $bd;
+        border: none;
         border-radius: 15px;
         padding-left: 24px;
         background-color: #FEF6E7;
         background-image: url(../assets/header/mid/MagnifyingGlass.png);
         background-repeat: no-repeat;
         background-position: 96%;
+
+        @include mixins.tablet {
+          padding-left: 10px;
+          background-size: 8%;
+        }
 
         &::placeholder {
           @include mixins.text-m;
@@ -82,8 +110,17 @@ header {
       display: flex;
       align-items: center;
 
+      .header-mid-box {
+        padding: 0;
+      }
+
       li {
+        display: flex;
         padding-left: 32px;
+
+        @include mixins.tablet {
+          padding-left: 10px;
+        }
       }
     }
   }
@@ -93,6 +130,10 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include mixins.tablet {
+        justify-content: space-around;
+      }
 
       li {
         padding: 11px 0;
@@ -119,7 +160,6 @@ header {
 #banner {
 
   figure {
-    // position: relative;
     display: flex;
     align-items: center;
     background-image: url(../assets/banner.png);
@@ -127,13 +167,27 @@ header {
     background-size: 100%;
     height: 520px;
 
+    @include mixins.tablet {
+      height: auto;
+    }
+
     figcaption {
       width: 387px;
       height: 252px;
       margin-left: 144px;
 
+      @include mixins.tablet {
+        width: 350px;
+        margin: 10px 0 0 20px;
+      }
+
       p {
-        @include mixins.title-g
+        @include mixins.title-g;
+
+        @include mixins.tablet {
+          @include mixins.title-m;
+          color: #fff;
+        }
       }
 
       button {
@@ -152,6 +206,7 @@ header {
   h1 {
     @include mixins.title-m;
     margin-bottom: 24px;
+
   }
 
   div {
@@ -185,10 +240,16 @@ header {
 
     h1 {
       @include mixins.title-m;
+
     }
 
     ul {
       display: flex;
+
+      @include mixins.tablet {
+        flex-wrap: wrap;
+        justify-content: end;
+      }
 
       li {
         display: flex;
@@ -216,9 +277,6 @@ header {
   }
 
   #vitrine-content {
-    // width: 100%;
-    // height: 300px;
-    // background-color: gray;
 
     .vitrine-content-list {
       display: flex;
@@ -227,6 +285,13 @@ header {
 
     li {
       margin-right: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include mixins.tablet {
+        margin-left: 30px;
+      }
 
       .vitrine-content-top {
         display: flex;
@@ -245,6 +310,8 @@ header {
       }
 
       figure {
+        cursor: pointer;
+
         div {
           text-align: center;
         }
@@ -312,11 +379,6 @@ header {
     }
   }
 
-
-
-
-
-
   .vitrine-ver {
     display: flex;
     justify-content: center;
@@ -333,6 +395,10 @@ header {
 #brand {
   @include mixins.container;
   margin-top: 250px;
+
+  @include mixins.tablet {
+    margin-top: 300px;
+  }
 
   .brand-title {
     display: flex;
@@ -362,6 +428,7 @@ header {
       box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
       border-radius: 20px;
       border: 1px solid #E5E5E5;
+      margin-right: 20px;
       display: flex;
       align-items: center;
 
@@ -374,6 +441,11 @@ header {
   .brand-cards {
     display: flex;
     justify-content: space-between;
+
+    @include mixins.tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     figure {
       display: flex;
@@ -421,6 +493,13 @@ header {
     .card-2 {
       background-color: variables.$second-color;
       justify-content: space-between;
+      @include mixins.tablet {
+        margin-top: 25px;
+      }
+
+      img {
+        border-radius: 20px;
+      }
 
       h1 {
         @include mixins.title-m;
@@ -455,6 +534,7 @@ header {
   .card-container {
     display: flex;
     justify-content: space-between;
+
   }
 
   figure {
@@ -462,8 +542,13 @@ header {
     border-radius: 15px;
     background-color: variables.$second-color;
 
+    @include mixins.tablet {
+      margin-right: 43px;
+    }
+
     img {
       border-radius: 15px 15px 0 0;
+
     }
 
     figcaption {
@@ -509,8 +594,16 @@ header {
     }
   }
 
+  #instagram-container {
+    padding-right: 25px;
+  }
+
   ul {
     display: flex;
+
+    @include mixins.tablet {
+      padding-left: 40px;
+    }
   }
 }
 
@@ -595,6 +688,11 @@ footer {
   color: #fff;
   background-color: variables.$primary-color;
 
+  @include mixins.tablet {
+    display: flex;
+    justify-content: center;
+  }
+
   h1 {
     @include mixins.title-footer;
     text-align: center;
@@ -607,6 +705,10 @@ footer {
   .area1 {
     grid-area: area1;
     border-right: 1px solid #fff;
+
+    @include mixins.tablet {
+      display: none;
+    }
 
     .social-media {
       margin: 0 auto;
@@ -647,6 +749,10 @@ footer {
   .area2 {
     grid-area: area2;
     border-bottom: 1px solid #fff;
+
+    @include mixins.tablet {
+      display: none;
+    }
 
     span {
       @include mixins.title-p;
@@ -706,15 +812,32 @@ footer {
     padding: 40px 0;
     align-items: center;
 
+    @include mixins.tablet {
+      justify-content: space-around;
+      width: 100%;
+    }
+
     .area3-card-1 {
       margin-left: 50px;
+
+      @include mixins.tablet {
+        margin: 0;
+      }
     }
 
     .area3-card-2 {
       margin-left: 270px;
 
+      @include mixins.tablet {
+        margin: 0;
+      }
+
       img {
         margin-right: 32px;
+
+        @include mixins.tablet {
+          margin: 0;
+        }
       }
     }
 
@@ -722,5 +845,77 @@ footer {
       @include mixins.text-p;
       color: #fff;
     }
+  }
+}
+
+.modal-wrapper {
+  z-index: 1;
+  display: none;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .modal-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8%;
+
+    .modal-content-img {}
+
+    .modal-content-details {
+      width: 350px;
+      height: 180px;
+
+      h1 {
+        @include mixins.modal-text;
+        margin-bottom: 25px;
+      }
+
+      i {
+        @include mixins.modal-text;
+        font-weight: 900;
+      }
+
+      p {
+        @include mixins.modal-text;
+        font-size: 10px;
+        line-height: 150.5%;
+        letter-spacing: 0.05em;
+        color: #222222;
+        margin: 20px 0;
+      }
+
+      a {
+        @include mixins.modal-text;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .modal {
+    width: 769px;
+    height: 355px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border-radius: 5px;
+
+    @include mixins.tablet {
+      width: 650px;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    color: #707070;
+    cursor: pointer;
   }
 }
