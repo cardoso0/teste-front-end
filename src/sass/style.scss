@@ -151,6 +151,7 @@ header {
       @include mixins.tablet {
         justify-content: space-around;
       }
+
       @include mixins.mobile {
         flex-wrap: wrap;
         margin-right: 5px;
@@ -423,6 +424,7 @@ header {
   @include mixins.tablet {
     margin-top: 300px;
   }
+
   @include mixins.mobile {
     margin-top: 400px;
   }
@@ -432,6 +434,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+
     @include mixins.mobile {
       margin-bottom: 30px;
     }
@@ -498,12 +501,15 @@ header {
 
     .card-1 {
       background-image: url(../assets/brand/parceiros.png);
+
       @include mixins.mobile {
         display: none;
       }
+
       figcaption {
         max-width: 50px;
       }
+
       h1 {
         @include mixins.title-p;
         font-weight: 700;
@@ -532,9 +538,11 @@ header {
       @include mixins.tablet {
         margin-top: 25px;
       }
+
       @include mixins.mobile {
         max-width: 320px;
         justify-content: space-around;
+
         @include mixins.mobile {
           margin-top: 0;
         }
@@ -542,6 +550,7 @@ header {
 
       img {
         border-radius: 20px;
+
         @include mixins.mobile {
           max-width: 160px;
         }
@@ -549,6 +558,7 @@ header {
 
       h1 {
         @include mixins.title-m;
+
         @include mixins.mobile {
           @include mixins.title-p;
         }
@@ -557,6 +567,7 @@ header {
       p {
         @include mixins.text-g;
         margin-top: 16px;
+
         @include mixins.mobile {
           @include mixins.text-m;
         }
@@ -564,6 +575,7 @@ header {
 
       button {
         width: 156px;
+
         @include mixins.mobile {
           max-width: 106px;
           font-size: 0.8rem;
@@ -659,6 +671,10 @@ header {
 
     @include mixins.tablet {
       padding-left: 40px;
+    }
+
+    @include mixins.mobile {
+      padding-left: 20px;
     }
   }
 }
@@ -888,6 +904,10 @@ footer {
         margin: 0;
       }
 
+      @include mixins.mobile {
+        max-width: 120px;
+      }
+
       img {
         margin-right: 32px;
 
@@ -920,15 +940,26 @@ footer {
     align-items: center;
     margin-top: 8%;
 
-    .modal-content-img {}
+    @include mixins.mobile {
+      margin-top: 0;
+      flex-direction: column;
+    }
 
     .modal-content-details {
       width: 350px;
       height: 180px;
 
+      @include mixins.mobile {
+        max-width: 280px;
+      }
+
       h1 {
         @include mixins.modal-text;
         margin-bottom: 25px;
+
+        @include mixins.mobile {
+          margin-bottom: 15px;
+        }
       }
 
       i {
@@ -943,6 +974,10 @@ footer {
         letter-spacing: 0.05em;
         color: #222222;
         margin: 20px 0;
+
+        @include mixins.mobile {
+          margin: 5px 0;
+        }
       }
 
       a {
@@ -963,6 +998,10 @@ footer {
 
     @include mixins.tablet {
       width: 650px;
+    }
+
+    @include mixins.mobile {
+      max-width: 320px;
     }
   }
 

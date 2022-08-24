@@ -717,6 +717,11 @@ header nav ul li a img {
     padding-left: 40px;
   }
 }
+@media (max-width: 400px) {
+  #instagram ul {
+    padding-left: 20px;
+  }
+}
 
 #newsletter {
   max-width: 90%;
@@ -940,6 +945,11 @@ footer .area3 .area3-card-2 {
     margin: 0;
   }
 }
+@media (max-width: 400px) {
+  footer .area3 .area3-card-2 {
+    max-width: 120px;
+  }
+}
 footer .area3 .area3-card-2 img {
   margin-right: 32px;
 }
@@ -972,9 +982,20 @@ footer .area3 p {
   align-items: center;
   margin-top: 8%;
 }
+@media (max-width: 400px) {
+  .modal-wrapper .modal-content {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
 .modal-wrapper .modal-content .modal-content-details {
   width: 350px;
   height: 180px;
+}
+@media (max-width: 400px) {
+  .modal-wrapper .modal-content .modal-content-details {
+    max-width: 280px;
+  }
 }
 .modal-wrapper .modal-content .modal-content-details h1 {
   font-family: "Lato", sans-serif;
@@ -985,6 +1006,11 @@ footer .area3 p {
   letter-spacing: 0.05em;
   color: #041E50;
   margin-bottom: 25px;
+}
+@media (max-width: 400px) {
+  .modal-wrapper .modal-content .modal-content-details h1 {
+    margin-bottom: 15px;
+  }
 }
 .modal-wrapper .modal-content .modal-content-details i {
   font-family: "Lato", sans-serif;
@@ -1010,6 +1036,11 @@ footer .area3 p {
   color: #222222;
   margin: 20px 0;
 }
+@media (max-width: 400px) {
+  .modal-wrapper .modal-content .modal-content-details p {
+    margin: 5px 0;
+  }
+}
 .modal-wrapper .modal-content .modal-content-details a {
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -1032,6 +1063,11 @@ footer .area3 p {
 @media (max-width: 768px) {
   .modal-wrapper .modal {
     width: 650px;
+  }
+}
+@media (max-width: 400px) {
+  .modal-wrapper .modal {
+    max-width: 320px;
   }
 }
 .modal-wrapper .modal-close {

@@ -4,13 +4,13 @@ const modalContent = document.querySelector('.modal-content')
 
 const detailsModal = (item) => {
   return `
-  <div class="modal-content-img"><img src="${item.photo}" alt=""></div>
+    <div class="modal-content-img"><img src="${item.photo}" alt=""></div>
     <div class="modal-content-details">
     <h1>${item.productName}</h1>
     <i>R$ ${item.price}</i>
     <p>${item.descriptionShort}</p>
     <a href="#">Veja mais detalhes do produto</a>
-  </div>`
+    </div>`
 }
 const handleClick = async (event) => {
   modalContent.innerHTML = ''
