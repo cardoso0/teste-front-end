@@ -758,6 +758,11 @@ header nav ul li a img {
   line-height: 36px;
   color: #4D4D4D;
 }
+@media (max-width: 400px) {
+  #newsletter form h1 {
+    max-width: 270px;
+  }
+}
 #newsletter form #name {
   width: 343px;
   height: 48px;
@@ -773,6 +778,11 @@ header nav ul li a img {
   font-size: 14px;
   line-height: 21px;
   color: #9F9F9F;
+}
+@media (max-width: 400px) {
+  #newsletter form #name {
+    max-width: 270px;
+  }
 }
 #newsletter form #email {
   width: 343px;
@@ -790,6 +800,11 @@ header nav ul li a img {
   font-size: 14px;
   line-height: 21px;
   color: #9F9F9F;
+}
+@media (max-width: 400px) {
+  #newsletter form #email {
+    max-width: 270px;
+  }
 }
 #newsletter form button {
   width: 145px;
