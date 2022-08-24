@@ -36,6 +36,11 @@ header .header-top {
   justify-content: space-around;
   padding: 6px 0;
 }
+@media (max-width: 400px) {
+  header .header-top {
+    flex-wrap: wrap;
+  }
+}
 header .header-top div {
   display: flex;
   align-items: center;
@@ -69,6 +74,11 @@ header .header-mid {
     justify-content: space-around;
   }
 }
+@media (max-width: 400px) {
+  header .header-mid {
+    flex-wrap: wrap;
+  }
+}
 header .header-mid form {
   width: 657px;
 }
@@ -76,6 +86,11 @@ header .header-mid form {
   header .header-mid form {
     min-width: 250px;
     max-width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  header .header-mid form {
+    margin-top: 10px;
   }
 }
 header .header-mid form input {
@@ -105,6 +120,11 @@ header .header-mid ul {
   display: flex;
   align-items: center;
 }
+@media (max-width: 400px) {
+  header .header-mid ul {
+    margin-top: 10px;
+  }
+}
 header .header-mid ul .header-mid-box {
   padding: 0;
 }
@@ -127,6 +147,12 @@ header nav ul {
     justify-content: space-around;
   }
 }
+@media (max-width: 400px) {
+  header nav ul {
+    flex-wrap: wrap;
+    margin-right: 5px;
+  }
+}
 header nav ul li {
   padding: 11px 0;
 }
@@ -146,6 +172,11 @@ header nav ul li a img {
   padding-right: 10px;
 }
 
+@media (max-width: 400px) {
+  #banner {
+    display: none;
+  }
+}
 #banner figure {
   display: flex;
   align-items: center;
@@ -402,11 +433,21 @@ header nav ul li a img {
     margin-top: 300px;
   }
 }
+@media (max-width: 400px) {
+  #brand {
+    margin-top: 400px;
+  }
+}
 #brand .brand-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+}
+@media (max-width: 400px) {
+  #brand .brand-title {
+    margin-bottom: 30px;
+  }
 }
 #brand .brand-title h1 {
   font-weight: 700;
@@ -478,17 +519,25 @@ header nav ul li a img {
 #brand .brand-cards .card-1 {
   background-image: url(../assets/brand/parceiros.png);
 }
+@media (max-width: 400px) {
+  #brand .brand-cards .card-1 {
+    display: none;
+  }
+}
+#brand .brand-cards .card-1 figcaption {
+  max-width: 50px;
+}
 #brand .brand-cards .card-1 h1 {
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 60px;
-  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4D4D4D;
   font-weight: 700;
 }
 #brand .brand-cards .card-1 p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
   color: #9F9F9F;
   color: #fff;
   margin-top: 8px;
@@ -509,14 +558,38 @@ header nav ul li a img {
     margin-top: 25px;
   }
 }
+@media (max-width: 400px) {
+  #brand .brand-cards .card-2 {
+    max-width: 320px;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 400px) and (max-width: 400px) {
+  #brand .brand-cards .card-2 {
+    margin-top: 0;
+  }
+}
 #brand .brand-cards .card-2 img {
   border-radius: 20px;
+}
+@media (max-width: 400px) {
+  #brand .brand-cards .card-2 img {
+    max-width: 160px;
+  }
 }
 #brand .brand-cards .card-2 h1 {
   font-weight: 700;
   font-size: 32px;
   line-height: 48px;
   color: #4D4D4D;
+}
+@media (max-width: 400px) {
+  #brand .brand-cards .card-2 h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4D4D4D;
+  }
 }
 #brand .brand-cards .card-2 p {
   font-weight: 400;
@@ -525,8 +598,22 @@ header nav ul li a img {
   color: #9F9F9F;
   margin-top: 16px;
 }
+@media (max-width: 400px) {
+  #brand .brand-cards .card-2 p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9F9F9F;
+  }
+}
 #brand .brand-cards .card-2 button {
   width: 156px;
+}
+@media (max-width: 400px) {
+  #brand .brand-cards .card-2 button {
+    max-width: 106px;
+    font-size: 0.8rem;
+  }
 }
 #brand .brand-cards .card-2 div {
   display: flex;

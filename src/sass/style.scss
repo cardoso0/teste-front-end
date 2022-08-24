@@ -41,6 +41,10 @@ header {
     justify-content: space-around;
     padding: 6px 0;
 
+    @include mixins.mobile {
+      flex-wrap: wrap;
+    }
+
     div {
       display: flex;
       align-items: center;
@@ -72,6 +76,10 @@ header {
       justify-content: space-around;
     }
 
+    @include mixins.mobile {
+      flex-wrap: wrap;
+    }
+
     // .header-mid-logo {
     //   margin-right: 40px;
     // }
@@ -82,6 +90,10 @@ header {
       @include mixins.tablet {
         min-width: 250px;
         max-width: 350px;
+      }
+
+      @include mixins.mobile {
+        margin-top: 10px;
       }
 
       input {
@@ -110,6 +122,10 @@ header {
       display: flex;
       align-items: center;
 
+      @include mixins.mobile {
+        margin-top: 10px;
+      }
+
       .header-mid-box {
         padding: 0;
       }
@@ -126,6 +142,7 @@ header {
   }
 
   nav {
+
     ul {
       display: flex;
       justify-content: space-between;
@@ -133,6 +150,10 @@ header {
 
       @include mixins.tablet {
         justify-content: space-around;
+      }
+      @include mixins.mobile {
+        flex-wrap: wrap;
+        margin-right: 5px;
       }
 
       li {
@@ -158,6 +179,9 @@ header {
 }
 
 #banner {
+  @include mixins.mobile {
+    display: none;
+  }
 
   figure {
     display: flex;
@@ -399,12 +423,18 @@ header {
   @include mixins.tablet {
     margin-top: 300px;
   }
+  @include mixins.mobile {
+    margin-top: 400px;
+  }
 
   .brand-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+    @include mixins.mobile {
+      margin-bottom: 30px;
+    }
 
     h1 {
       @include mixins.title-m;
@@ -468,14 +498,19 @@ header {
 
     .card-1 {
       background-image: url(../assets/brand/parceiros.png);
-
+      @include mixins.mobile {
+        display: none;
+      }
+      figcaption {
+        max-width: 50px;
+      }
       h1 {
-        @include mixins.title-g;
+        @include mixins.title-p;
         font-weight: 700;
       }
 
       p {
-        @include mixins.text-g;
+        @include mixins.text-p;
         color: #fff;
         margin-top: 8px;
       }
@@ -493,25 +528,46 @@ header {
     .card-2 {
       background-color: variables.$second-color;
       justify-content: space-between;
+
       @include mixins.tablet {
         margin-top: 25px;
+      }
+      @include mixins.mobile {
+        max-width: 320px;
+        justify-content: space-around;
+        @include mixins.mobile {
+          margin-top: 0;
+        }
       }
 
       img {
         border-radius: 20px;
+        @include mixins.mobile {
+          max-width: 160px;
+        }
       }
 
       h1 {
         @include mixins.title-m;
+        @include mixins.mobile {
+          @include mixins.title-p;
+        }
       }
 
       p {
         @include mixins.text-g;
         margin-top: 16px;
+        @include mixins.mobile {
+          @include mixins.text-m;
+        }
       }
 
       button {
         width: 156px;
+        @include mixins.mobile {
+          max-width: 106px;
+          font-size: 0.8rem;
+        }
       }
 
       div {
