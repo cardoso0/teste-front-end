@@ -17,9 +17,19 @@ header {
   box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
   border-radius: 0px 0px 10px 10px;
 }
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+}
 header .header-container {
   max-width: 90%;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  header .header-container {
+    max-width: 100%;
+  }
 }
 header .header-top {
   display: flex;
@@ -54,8 +64,19 @@ header .header-mid {
   border-top: 1px solid #F0F0F0;
   border-bottom: 2px solid #F0F0F0;
 }
+@media (max-width: 768px) {
+  header .header-mid {
+    justify-content: space-around;
+  }
+}
 header .header-mid form {
   width: 657px;
+}
+@media (max-width: 768px) {
+  header .header-mid form {
+    min-width: 250px;
+    max-width: 350px;
+  }
 }
 header .header-mid form input {
   width: 100%;
@@ -68,6 +89,12 @@ header .header-mid form input {
   background-repeat: no-repeat;
   background-position: 96%;
 }
+@media (max-width: 768px) {
+  header .header-mid form input {
+    padding-left: 10px;
+    background-size: 8%;
+  }
+}
 header .header-mid form input::placeholder {
   font-weight: 500;
   font-size: 14px;
@@ -78,13 +105,27 @@ header .header-mid ul {
   display: flex;
   align-items: center;
 }
+header .header-mid ul .header-mid-box {
+  padding: 0;
+}
 header .header-mid ul li {
+  display: flex;
   padding-left: 32px;
+}
+@media (max-width: 768px) {
+  header .header-mid ul li {
+    padding-left: 10px;
+  }
 }
 header nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  header nav ul {
+    justify-content: space-around;
+  }
 }
 header nav ul li {
   padding: 11px 0;
