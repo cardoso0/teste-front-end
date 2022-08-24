@@ -503,12 +503,14 @@ header nav ul li a img {
 #brand .brand-cards .card-2 {
   background-color: #FEF6E7;
   justify-content: space-between;
-  margin-top: 25px;
 }
 @media (max-width: 768px) {
-  #brand .brand-cards .card-2 img {
-    border-radius: 20px;
+  #brand .brand-cards .card-2 {
+    margin-top: 25px;
   }
+}
+#brand .brand-cards .card-2 img {
+  border-radius: 20px;
 }
 #brand .brand-cards .card-2 h1 {
   font-weight: 700;

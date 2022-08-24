@@ -53,6 +53,10 @@ $('#brand-container').slick({
 $('.card-container').slick({
   responsive: [
     {
+      breakpoint: 1500,
+      settings: "unslick"
+    },
+    {
       breakpoint: 768,
       settings: {
         slidesToShow: 2,

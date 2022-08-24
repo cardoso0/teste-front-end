@@ -493,12 +493,12 @@ header {
     .card-2 {
       background-color: variables.$second-color;
       justify-content: space-between;
-      margin-top: 25px;
+      @include mixins.tablet {
+        margin-top: 25px;
+      }
 
       img {
-        @include mixins.tablet {
-          border-radius: 20px;
-        }
+        border-radius: 20px;
       }
 
       h1 {
