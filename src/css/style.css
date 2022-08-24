@@ -397,6 +397,11 @@ header nav ul li a img {
   margin: 80px auto;
   margin-top: 250px;
 }
+@media (max-width: 768px) {
+  #brand {
+    margin-top: 300px;
+  }
+}
 #brand .brand-title {
   display: flex;
   justify-content: space-between;
@@ -438,6 +443,12 @@ header nav ul li a img {
 #brand .brand-cards {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  #brand .brand-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 #brand .brand-cards figure {
   display: flex;
@@ -492,6 +503,12 @@ header nav ul li a img {
 #brand .brand-cards .card-2 {
   background-color: #FEF6E7;
   justify-content: space-between;
+  margin-top: 25px;
+}
+@media (max-width: 768px) {
+  #brand .brand-cards .card-2 img {
+    border-radius: 20px;
+  }
 }
 #brand .brand-cards .card-2 h1 {
   font-weight: 700;

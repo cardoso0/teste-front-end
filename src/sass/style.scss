@@ -376,11 +376,6 @@ header {
     }
   }
 
-
-
-
-
-
   .vitrine-ver {
     display: flex;
     justify-content: center;
@@ -397,6 +392,9 @@ header {
 #brand {
   @include mixins.container;
   margin-top: 250px;
+  @include mixins.tablet {
+    margin-top: 300px;
+  }
 
   .brand-title {
     display: flex;
@@ -439,6 +437,10 @@ header {
   .brand-cards {
     display: flex;
     justify-content: space-between;
+    @include mixins.tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     figure {
       display: flex;
@@ -486,6 +488,13 @@ header {
     .card-2 {
       background-color: variables.$second-color;
       justify-content: space-between;
+      margin-top: 25px;
+
+      img {
+        @include mixins.tablet {
+          border-radius: 20px;
+        }
+      }
 
       h1 {
         @include mixins.title-m;

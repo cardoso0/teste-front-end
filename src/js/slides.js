@@ -38,6 +38,16 @@ $('#brand-container').slick({
   infinite: true,
   slidesToShow: 6,
   slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+  ]
 });
 
 $('#instagram-container').slick({
