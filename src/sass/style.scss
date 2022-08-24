@@ -834,6 +834,8 @@ footer {
     align-items: center;
     margin-top: 8%;
 
+    .modal-content-img {}
+
     .modal-content-details {
       width: 350px;
       height: 180px;
@@ -872,6 +874,10 @@ footer {
     background: white;
     position: relative;
     border-radius: 5px;
+
+    @include mixins.tablet {
+      width: 650px;
+    }
   }
 
   .modal-close {
