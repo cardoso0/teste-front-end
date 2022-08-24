@@ -206,7 +206,7 @@ header {
   h1 {
     @include mixins.title-m;
     margin-bottom: 24px;
-    
+
   }
 
   div {
@@ -245,10 +245,12 @@ header {
 
     ul {
       display: flex;
+
       @include mixins.tablet {
         flex-wrap: wrap;
         justify-content: end;
       }
+
       li {
         display: flex;
         align-items: center;
@@ -275,10 +277,10 @@ header {
   }
 
   #vitrine-content {
-  
+
     .vitrine-content-list {
       display: flex;
-     
+
     }
 
     li {
@@ -286,9 +288,10 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       @include mixins.tablet {
         margin-left: 30px;
-      } 
+      }
 
       .vitrine-content-top {
         display: flex;
@@ -392,6 +395,7 @@ header {
 #brand {
   @include mixins.container;
   margin-top: 250px;
+
   @include mixins.tablet {
     margin-top: 300px;
   }
@@ -437,6 +441,7 @@ header {
   .brand-cards {
     display: flex;
     justify-content: space-between;
+
     @include mixins.tablet {
       flex-wrap: wrap;
       justify-content: center;
@@ -529,6 +534,7 @@ header {
   .card-container {
     display: flex;
     justify-content: space-between;
+
   }
 
   figure {
@@ -536,8 +542,13 @@ header {
     border-radius: 15px;
     background-color: variables.$second-color;
 
+    @include mixins.tablet {
+      margin-right: 43px;
+    }
+
     img {
       border-radius: 15px 15px 0 0;
+
     }
 
     figcaption {

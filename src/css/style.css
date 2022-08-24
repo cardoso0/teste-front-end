@@ -552,6 +552,11 @@ header nav ul li a img {
   border-radius: 15px;
   background-color: #FEF6E7;
 }
+@media (max-width: 768px) {
+  #blog figure {
+    margin-right: 43px;
+  }
+}
 #blog figure img {
   border-radius: 15px 15px 0 0;
 }

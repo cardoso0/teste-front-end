@@ -50,6 +50,19 @@ $('#brand-container').slick({
   ]
 });
 
+$('.card-container').slick({
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+  ]
+});
+
 $('#instagram-container').slick({
   infinite: true,
   slidesToShow: 5,
