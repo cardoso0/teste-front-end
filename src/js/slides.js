@@ -13,6 +13,14 @@ const slids = async () => {
           infinite: true,
         }
       },
+      {
+        breakpoint: 410,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
     ]
   });
 }
@@ -31,6 +39,14 @@ $('#categories-container').slick({
         infinite: true,
       }
     },
+    {
+      breakpoint: 410,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
   ]
 });
 
@@ -43,6 +59,14 @@ $('#brand-container').slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 410,
+      settings: {
+        slidesToShow: 2,
         slidesToScroll: 2,
         infinite: true,
       }
@@ -64,6 +88,14 @@ $('.card-container').slick({
         infinite: true,
       }
     },
+    {
+      breakpoint: 410,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
   ]
 });
 
@@ -77,6 +109,14 @@ $('#instagram-container').slick({
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 410,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
         infinite: true,
       }
     },
