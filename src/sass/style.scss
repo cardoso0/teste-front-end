@@ -688,6 +688,11 @@ footer {
   color: #fff;
   background-color: variables.$primary-color;
 
+  @include mixins.tablet {
+    display: flex;
+    justify-content: center;
+  }
+
   h1 {
     @include mixins.title-footer;
     text-align: center;
@@ -700,6 +705,10 @@ footer {
   .area1 {
     grid-area: area1;
     border-right: 1px solid #fff;
+
+    @include mixins.tablet {
+      display: none;
+    }
 
     .social-media {
       margin: 0 auto;
@@ -740,6 +749,10 @@ footer {
   .area2 {
     grid-area: area2;
     border-bottom: 1px solid #fff;
+
+    @include mixins.tablet {
+      display: none;
+    }
 
     span {
       @include mixins.title-p;
@@ -799,15 +812,32 @@ footer {
     padding: 40px 0;
     align-items: center;
 
+    @include mixins.tablet {
+      justify-content: space-around;
+      width: 100%;
+    }
+
     .area3-card-1 {
       margin-left: 50px;
+
+      @include mixins.tablet {
+        margin: 0;
+      }
     }
 
     .area3-card-2 {
       margin-left: 270px;
 
+      @include mixins.tablet {
+        margin: 0;
+      }
+
       img {
         margin-right: 32px;
+
+        @include mixins.tablet {
+          margin: 0;
+        }
       }
     }
 

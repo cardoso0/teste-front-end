@@ -714,6 +714,12 @@ footer {
   color: #fff;
   background-color: #FBB900;
 }
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+}
 footer h1 {
   font-weight: 700;
   font-size: 24px;
@@ -727,6 +733,11 @@ footer a {
 footer .area1 {
   grid-area: area1;
   border-right: 1px solid #fff;
+}
+@media (max-width: 768px) {
+  footer .area1 {
+    display: none;
+  }
 }
 footer .area1 .social-media {
   margin: 0 auto;
@@ -760,6 +771,11 @@ footer .area1 .about p {
 footer .area2 {
   grid-area: area2;
   border-bottom: 1px solid #fff;
+}
+@media (max-width: 768px) {
+  footer .area2 {
+    display: none;
+  }
 }
 footer .area2 span {
   font-weight: 700;
@@ -813,14 +829,35 @@ footer .area3 {
   padding: 40px 0;
   align-items: center;
 }
+@media (max-width: 768px) {
+  footer .area3 {
+    justify-content: space-around;
+    width: 100%;
+  }
+}
 footer .area3 .area3-card-1 {
   margin-left: 50px;
+}
+@media (max-width: 768px) {
+  footer .area3 .area3-card-1 {
+    margin: 0;
+  }
 }
 footer .area3 .area3-card-2 {
   margin-left: 270px;
 }
+@media (max-width: 768px) {
+  footer .area3 .area3-card-2 {
+    margin: 0;
+  }
+}
 footer .area3 .area3-card-2 img {
   margin-right: 32px;
+}
+@media (max-width: 768px) {
+  footer .area3 .area3-card-2 img {
+    margin: 0;
+  }
 }
 footer .area3 p {
   font-weight: 500;
